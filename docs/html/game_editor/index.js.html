@@ -1,0 +1,2036 @@
+<!DOCTYPE html><html lang="en" style="font-size:16px"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><link type="text/css" rel="stylesheet" href="custom.css"><title>Source: index.js</title><!--[if lt IE 9]>
+      <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]--><script src="scripts/third-party/hljs.js" defer="defer"></script><script src="scripts/third-party/hljs-line-num.js" defer="defer"></script><script src="scripts/third-party/popper.js" defer="defer"></script><script src="scripts/third-party/tippy.js" defer="defer"></script><script src="scripts/third-party/tocbot.min.js"></script><script>var baseURL="/",locationPathname="";baseURL=(locationPathname=document.location.pathname).substr(0,locationPathname.lastIndexOf("/")+1)</script><link rel="stylesheet" href="styles/clean-jsdoc-theme.min.css"><svg aria-hidden="true" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" style="display:none"><defs><symbol id="copy-icon" viewbox="0 0 488.3 488.3"><g><path d="M314.25,85.4h-227c-21.3,0-38.6,17.3-38.6,38.6v325.7c0,21.3,17.3,38.6,38.6,38.6h227c21.3,0,38.6-17.3,38.6-38.6V124    C352.75,102.7,335.45,85.4,314.25,85.4z M325.75,449.6c0,6.4-5.2,11.6-11.6,11.6h-227c-6.4,0-11.6-5.2-11.6-11.6V124    c0-6.4,5.2-11.6,11.6-11.6h227c6.4,0,11.6,5.2,11.6,11.6V449.6z"/><path d="M401.05,0h-227c-21.3,0-38.6,17.3-38.6,38.6c0,7.5,6,13.5,13.5,13.5s13.5-6,13.5-13.5c0-6.4,5.2-11.6,11.6-11.6h227    c6.4,0,11.6,5.2,11.6,11.6v325.7c0,6.4-5.2,11.6-11.6,11.6c-7.5,0-13.5,6-13.5,13.5s6,13.5,13.5,13.5c21.3,0,38.6-17.3,38.6-38.6    V38.6C439.65,17.3,422.35,0,401.05,0z"/></g></symbol><symbol id="search-icon" viewBox="0 0 512 512"><g><g><path d="M225.474,0C101.151,0,0,101.151,0,225.474c0,124.33,101.151,225.474,225.474,225.474    c124.33,0,225.474-101.144,225.474-225.474C450.948,101.151,349.804,0,225.474,0z M225.474,409.323    c-101.373,0-183.848-82.475-183.848-183.848S124.101,41.626,225.474,41.626s183.848,82.475,183.848,183.848    S326.847,409.323,225.474,409.323z"/></g></g><g><g><path d="M505.902,476.472L386.574,357.144c-8.131-8.131-21.299-8.131-29.43,0c-8.131,8.124-8.131,21.306,0,29.43l119.328,119.328    c4.065,4.065,9.387,6.098,14.715,6.098c5.321,0,10.649-2.033,14.715-6.098C514.033,497.778,514.033,484.596,505.902,476.472z"/></g></g></symbol><symbol id="font-size-icon" viewBox="0 0 24 24"><path fill="none" d="M0 0h24v24H0z"/><path d="M11.246 15H4.754l-2 5H.6L7 4h2l6.4 16h-2.154l-2-5zm-.8-2L8 6.885 5.554 13h4.892zM21 12.535V12h2v8h-2v-.535a4 4 0 1 1 0-6.93zM19 18a2 2 0 1 0 0-4 2 2 0 0 0 0 4z"/></symbol><symbol id="add-icon" viewBox="0 0 24 24"><path fill="none" d="M0 0h24v24H0z"/><path d="M11 11V5h2v6h6v2h-6v6h-2v-6H5v-2z"/></symbol><symbol id="minus-icon" viewBox="0 0 24 24"><path fill="none" d="M0 0h24v24H0z"/><path d="M5 11h14v2H5z"/></symbol><symbol id="dark-theme-icon" viewBox="0 0 24 24"><path fill="none" d="M0 0h24v24H0z"/><path d="M10 7a7 7 0 0 0 12 4.9v.1c0 5.523-4.477 10-10 10S2 17.523 2 12 6.477 2 12 2h.1A6.979 6.979 0 0 0 10 7zm-6 5a8 8 0 0 0 15.062 3.762A9 9 0 0 1 8.238 4.938 7.999 7.999 0 0 0 4 12z"/></symbol><symbol id="light-theme-icon" viewBox="0 0 24 24"><path fill="none" d="M0 0h24v24H0z"/><path d="M12 18a6 6 0 1 1 0-12 6 6 0 0 1 0 12zm0-2a4 4 0 1 0 0-8 4 4 0 0 0 0 8zM11 1h2v3h-2V1zm0 19h2v3h-2v-3zM3.515 4.929l1.414-1.414L7.05 5.636 5.636 7.05 3.515 4.93zM16.95 18.364l1.414-1.414 2.121 2.121-1.414 1.414-2.121-2.121zm2.121-14.85l1.414 1.415-2.121 2.121-1.414-1.414 2.121-2.121zM5.636 16.95l1.414 1.414-2.121 2.121-1.414-1.414 2.121-2.121zM23 11v2h-3v-2h3zM4 11v2H1v-2h3z"/></symbol><symbol id="reset-icon" viewBox="0 0 24 24"><path fill="none" d="M0 0h24v24H0z"/><path d="M18.537 19.567A9.961 9.961 0 0 1 12 22C6.477 22 2 17.523 2 12S6.477 2 12 2s10 4.477 10 10c0 2.136-.67 4.116-1.81 5.74L17 12h3a8 8 0 1 0-2.46 5.772l.997 1.795z"/></symbol><symbol id="down-icon" viewBox="0 0 16 16"><path fill-rule="evenodd" clip-rule="evenodd" d="M12.7803 6.21967C13.0732 6.51256 13.0732 6.98744 12.7803 7.28033L8.53033 11.5303C8.23744 11.8232 7.76256 11.8232 7.46967 11.5303L3.21967 7.28033C2.92678 6.98744 2.92678 6.51256 3.21967 6.21967C3.51256 5.92678 3.98744 5.92678 4.28033 6.21967L8 9.93934L11.7197 6.21967C12.0126 5.92678 12.4874 5.92678 12.7803 6.21967Z"></path></symbol><symbol id="codepen-icon" viewBox="0 0 24 24"><path fill="none" d="M0 0h24v24H0z"/><path d="M16.5 13.202L13 15.535v3.596L19.197 15 16.5 13.202zM14.697 12L12 10.202 9.303 12 12 13.798 14.697 12zM20 10.869L18.303 12 20 13.131V10.87zM19.197 9L13 4.869v3.596l3.5 2.333L19.197 9zM7.5 10.798L11 8.465V4.869L4.803 9 7.5 10.798zM4.803 15L11 19.131v-3.596l-3.5-2.333L4.803 15zM4 13.131L5.697 12 4 10.869v2.262zM2 9a1 1 0 0 1 .445-.832l9-6a1 1 0 0 1 1.11 0l9 6A1 1 0 0 1 22 9v6a1 1 0 0 1-.445.832l-9 6a1 1 0 0 1-1.11 0l-9-6A1 1 0 0 1 2 15V9z"/></symbol><symbol id="close-icon" viewBox="0 0 24 24"><path fill="none" d="M0 0h24v24H0z"/><path d="M12 10.586l4.95-4.95 1.414 1.414-4.95 4.95 4.95 4.95-1.414 1.414-4.95-4.95-4.95 4.95-1.414-1.414 4.95-4.95-4.95-4.95L7.05 5.636z"/></symbol><symbol id="menu-icon" viewBox="0 0 24 24"><path fill="none" d="M0 0h24v24H0z"/><path d="M3 4h18v2H3V4zm0 7h18v2H3v-2zm0 7h18v2H3v-2z"/></symbol></defs></svg></head><body data-theme="dark"><div class="sidebar-container"><div class="sidebar" id="sidebar"><a href="/" class="sidebar-title sidebar-title-anchor">@ud-viz/game_editor</a><div class="sidebar-items-container"><div class="sidebar-section-title with-arrow" data-isopen="false" id="sidebar-classes"><div>Classes</div><svg><use xlink:href="#down-icon"></use></svg></div><div class="sidebar-section-children-container"><div class="sidebar-section-children"><a href="DebugCollision.html">DebugCollision</a></div><div class="sidebar-section-children"><a href="Editor.html">Editor</a></div><div class="sidebar-section-children"><a href="GameObject3DInput.html">GameObject3DInput</a></div><div class="sidebar-section-children"><a href="ObjectInput.html">ObjectInput</a></div></div><div class="sidebar-section-title with-arrow" data-isopen="false" id="sidebar-tutorials"><div>Tutorials</div><svg><use xlink:href="#down-icon"></use></svg></div><div class="sidebar-section-children-container"><div class="sidebar-section-children"><a href="tutorial-Changelog.html">Changelog</a></div><div class="sidebar-section-children"><a href="tutorial-Contributing.html">Contributing</a></div><div class="sidebar-section-children"><a href="tutorial-Contributors.html">Contributors</a></div><div class="sidebar-section-children"><a href="tutorial-Definitions.html">Definitions</a></div><div class="sidebar-section-children"><a href="tutorial-Developers.html">Developers</a></div><div class="sidebar-section-children"><a href="tutorial-ReleasePublish.html">ReleasePublish</a></div><div class="sidebar-section-children"><a href="tutorial-Reproducibility.html">Reproducibility</a></div><div class="sidebar-section-children"><a href="tutorial-architecture.html">architecture</a></div><div class="sidebar-section-children"><a href="tutorial-game.html">game</a></div><div class="sidebar-section-children"><a href="tutorial-how_to_import.html">how_to_import</a></div><div class="sidebar-section-children"><a href="tutorial-initial_camera_transform.html">initial_camera_transform</a></div></div></div></div></div><div class="navbar-container" id="VuAckcnZhf"><nav class="navbar"><div class="navbar-left-items"><div class="navbar-item"><a id="Github" href="https://github.com/VCityTeam/UD-Viz" target="_blank">Github</a></div><div class="navbar-item"><a id="Examples" href="https://ud-viz.vcityliris.data.alpha.grandlyon.com/" target="_blank">Examples</a></div><div class="navbar-item"><a id="udvizHome" href="../" target="">udviz</a></div><div class="navbar-item"><a id="udviz/extensions_3d_tiles_temporal" href="../extensions_3d_tiles_temporal" target="">udviz/extensions_3d_tiles_temporal</a></div><div class="navbar-item"><a id="udviz/frame3d" href="../frame3d" target="">udviz/frame3d</a></div><div class="navbar-item"><a id="udviz/game_browser" href="../game_browser" target="">udviz/game_browser</a></div><div class="navbar-item"><a id="udviz/game_browser_template" href="../game_browser_template" target="">udviz/game_browser_template</a></div><div class="navbar-item"><a id="udviz/game_editor" href="../game_editor" target="">udviz/game_editor</a></div><div class="navbar-item"><a id="udviz/game_node" href="../game_node" target="">udviz/game_node</a></div><div class="navbar-item"><a id="udviz/game_node_template" href="../game_node_template" target="">udviz/game_node_template</a></div><div class="navbar-item"><a id="udviz/game_shared" href="../game_shared" target="">udviz/game_shared</a></div><div class="navbar-item"><a id="udviz/game_shared_template" href="../game_shared_template" target="">udviz/game_shared_template</a></div><div class="navbar-item"><a id="udviz/show_room" href="../show_room" target="">udviz/show_room</a></div><div class="navbar-item"><a id="udviz/smdb" href="../smdb" target="">udviz/smdb</a></div><div class="navbar-item"><a id="udviz/utils_browser" href="../utils_browser" target="">udviz/utils_browser</a></div><div class="navbar-item"><a id="udviz/utils_node" href="../utils_node" target="">udviz/utils_node</a></div><div class="navbar-item"><a id="udviz/utils_shared" href="../utils_shared" target="">udviz/utils_shared</a></div><div class="navbar-item"><a id="udviz/visualizer" href="../visualizer" target="">udviz/visualizer</a></div><div class="navbar-item"><a id="udviz/widget_3d_tiles" href="../widget_3d_tiles" target="">udviz/widget_3d_tiles</a></div><div class="navbar-item"><a id="udviz/widget_base_map" href="../widget_base_map" target="">udviz/widget_base_map</a></div><div class="navbar-item"><a id="udviz/widget_bookmark" href="../widget_bookmark" target="">udviz/widget_bookmark</a></div><div class="navbar-item"><a id="udviz/widget_camera_positioner" href="../widget_camera_positioner" target="">udviz/widget_camera_positioner</a></div><div class="navbar-item"><a id="udviz/widget_extensions_3d_tiles_temporal" href="../widget_extensions_3d_tiles_temporal" target="">udviz/widget_extensions_3d_tiles_temporal</a></div><div class="navbar-item"><a id="udviz/widget_geocoding" href="../widget_geocoding" target="">udviz/widget_geocoding</a></div><div class="navbar-item"><a id="udviz/widget_guided_tour" href="../widget_guided_tour" target="">udviz/widget_guided_tour</a></div><div class="navbar-item"><a id="udviz/widget_layer_choice" href="../widget_layer_choice" target="">udviz/widget_layer_choice</a></div><div class="navbar-item"><a id="udviz/widget_legonizer" href="../widget_legonizer" target="">udviz/widget_legonizer</a></div><div class="navbar-item"><a id="udviz/widget_planar_controls" href="../widget_planar_controls" target="">udviz/widget_planar_controls</a></div><div class="navbar-item"><a id="udviz/widget_slide_show" href="../widget_slide_show" target="">udviz/widget_slide_show</a></div><div class="navbar-item"><a id="udviz/widget_sparql" href="../widget_sparql" target="">udviz/widget_sparql</a></div><div class="navbar-item"><a id="udviz/widget_versioning" href="../widget_versioning" target="">udviz/widget_versioning</a></div><div class="navbar-item"><a id="udviz/widget_workspace" href="../widget_workspace" target="">udviz/widget_workspace</a></div></div><div class="navbar-right-items"><div class="navbar-right-item"><button class="icon-button search-button" aria-label="open-search"><svg><use xlink:href="#search-icon"></use></svg></button></div><div class="navbar-right-item"><button class="icon-button theme-toggle" aria-label="toggle-theme"><svg><use class="theme-svg-use" xlink:href="#light-theme-icon"></use></svg></button></div><div class="navbar-right-item"><button class="icon-button font-size" aria-label="change-font-size"><svg><use xlink:href="#font-size-icon"></use></svg></button></div></div><nav></nav></nav></div><div class="toc-container"><div class="toc-content"><span class="bold">On this page</span><div id="eed4d2a0bfd64539bb9df78095dec881"></div></div></div><div class="body-wrapper"><div class="main-content"><div class="main-wrapper"><section id="source-page" class="source-page"><header><h1 id="title" class="has-anchor">index.js</h1></header><article><pre class="prettyprint source lang-js"><code>import {
+  AudioComponent,
+  ColliderComponent,
+  Context,
+  ExternalScriptComponent,
+  Object3D as GameObject3D,
+  GameScriptComponent,
+  RenderComponent,
+} from '@ud-viz/game_shared';
+import { AssetManager, RenderController } from '@ud-viz/game_browser';
+import {
+  Object3D,
+  Box3,
+  Vector3,
+  Quaternion,
+  Mesh,
+  BoxGeometry,
+  MeshBasicMaterial,
+  CircleGeometry,
+  Color,
+  Raycaster,
+  Vector2,
+  SphereGeometry,
+  Scene,
+  OrthographicCamera,
+  WebGLRenderer,
+  AmbientLight,
+  MathUtils,
+  DoubleSide,
+} from 'three';
+import { OrbitControls } from 'three/examples/jsm/controls/OrbitControls';
+import { TransformControls } from 'three/examples/jsm/controls/TransformControls';
+import { ConvexGeometry } from 'three/examples/jsm/geometries/ConvexGeometry';
+
+import './style.css';
+import {
+  cameraFitRectangle,
+  createLabelInput,
+  createLocalStorageSlider,
+  RequestAnimationFrameProcess,
+  Vector3Input,
+} from '@ud-viz/utils_browser';
+import {
+  arrayPushOnce,
+  objectParseNumeric,
+  removeFromArray,
+  throttle,
+} from '@ud-viz/utils_shared';
+
+const COLLIDER_MATERIAL = new MeshBasicMaterial({
+  color: 'green',
+  side: DoubleSide,
+});
+const COLLIDER_MATERIAL_SELECTED = new MeshBasicMaterial({
+  color: 'red',
+  side: DoubleSide,
+});
+const COLLIDER_POINT_MATERIAL = new MeshBasicMaterial({ color: 'yellow' });
+
+import { ObjectInput } from './objectInput/ObjectInput';
+export { ObjectInput };
+
+import * as nativeGameScriptVariablesInput from './objectInput/scriptVariables/game/game';
+import * as nativeExternalScriptVariablesInputs from './objectInput/scriptVariables/external/external';
+import * as nativeUserDataInputs from './objectInput/userData/userData';
+export { nativeUserDataInputs };
+export { nativeExternalScriptVariablesInputs };
+export { nativeGameScriptVariablesInput };
+export * from './DebugCollision';
+
+/** @class Provides functionality for editing and manipulating 3D objects in a web-based environment.*/
+export class Editor {
+  /**
+   *
+   * @param {import("@ud-viz/frame3d").Planar|import("@ud-viz/frame3d").Base} frame3D - frame 3d
+   * @param {AssetManager} assetManager - asset manager
+   * @param {object} options - options
+   * @param {Array} options.externalScriptVariablesInputs - input to edit ExternalScriptComponent variables
+   * @param {Array} options.gameScriptVariablesInputs - input to edit GameScriptComponent variables
+   * @param {Array} options.userDataInputs - input to edit .userData
+   * @param {Array} options.object3DModels - models of object3D
+   * @param {Array} options.possibleExternalScriptIds - ids that can be added to a gameobject3d ExternalScriptComponent
+   * @param {Array} options.possibleGameScriptIds - ids that can be added to a gameobject3d GameScriptComponent
+   * @param {object} options.userData - user data
+   */
+  constructor(frame3D, assetManager, options = {}) {
+    /** @type {import("@ud-viz/frame3d").Planar|import("@ud-viz/frame3d").Base} */
+    this.frame3D = frame3D;
+
+    /** @type {AssetManager} */
+    this.assetManager = assetManager;
+
+    /** @type {object} */
+    this.userData = options.userData || {};
+
+    // ui init
+    {
+      /** @type {HTMLElement} */
+      this.leftPan = document.createElement('div');
+      this.leftPan.setAttribute('id', 'left_pan');
+      this.frame3D.domElementUI.appendChild(this.leftPan);
+
+      const leftPanWidthInput = createLocalStorageSlider(
+        'editor_left_width_range_key',
+        'Taille UI ',
+        this.leftPan,
+        {
+          min: 100,
+          max: 700,
+          defaultValue: 300,
+        }
+      );
+      const updateLeftWidth = () => {
+        this.leftPan.style.width = leftPanWidthInput.value + 'px';
+      };
+      leftPanWidthInput.onchange = updateLeftWidth;
+      updateLeftWidth();
+
+      /** @type {HTMLElement} */
+      this.currentGODomelement = document.createElement('div');
+      this.currentGODomelement.setAttribute('id', 'current_game_object_3d');
+      this.leftPan.appendChild(this.currentGODomelement);
+
+      /** @type {HTMLElement} */
+      this.toolsDomElement = document.createElement('div');
+      this.toolsDomElement.setAttribute('id', 'editor_tools');
+      this.leftPan.appendChild(this.toolsDomElement);
+    }
+
+    // add object model
+    {
+      const selectObject3DModel = document.createElement('select');
+      this.toolsDomElement.appendChild(selectObject3DModel);
+
+      const buffer = new Map();
+
+      // add a default one
+      const defaultOption = document.createElement('option');
+      defaultOption.innerText = 'Empty';
+      const uuid = MathUtils.generateUUID();
+      defaultOption.value = uuid;
+      buffer.set(uuid, { name: 'GameObject3D' });
+      selectObject3DModel.appendChild(defaultOption);
+
+      // fill with ones pass at construction
+      if (options.object3DModels) {
+        options.object3DModels.forEach((model) => {
+          const option = document.createElement('option');
+          option.innerText = model.name;
+          const uuid = MathUtils.generateUUID();
+          option.value = uuid;
+          buffer.set(uuid, model);
+          selectObject3DModel.appendChild(option);
+        });
+      }
+
+      const addObject3DModelToSelectedGameObject3D =
+        document.createElement('button');
+      addObject3DModelToSelectedGameObject3D.innerText = 'Add gameobject3D';
+      this.toolsDomElement.appendChild(addObject3DModelToSelectedGameObject3D);
+
+      addObject3DModelToSelectedGameObject3D.onclick = () => {
+        const objectToAdd = new GameObject3D(
+          JSON.parse(
+            JSON.stringify(
+              buffer.get(selectObject3DModel.selectedOptions[0].value)
+            )
+          )
+        );
+
+        // reset everything TODO: optimize
+        this.gameObjectInput.gameObject3D.add(objectToAdd);
+        this.setCurrentGameObject3DJSON(this.currentGameObject3D.toJSON());
+        this.selectGameObject3D(
+          this.currentGameObject3D.getFirst((o) => o.uuid == objectToAdd.uuid)
+        );
+      };
+    }
+
+    // remove gameobject
+    {
+      const deleteCurrentGameObject3D = document.createElement('button');
+      deleteCurrentGameObject3D.innerText = 'Remove gameobject3D selected';
+      this.toolsDomElement.appendChild(deleteCurrentGameObject3D);
+
+      deleteCurrentGameObject3D.onclick = () => {
+        if (!this.gameObjectInput.gameObject3D.parent.isGameObject3D) {
+          alert('you cant delete root of your game');
+          return;
+        }
+        // reset everything TODO: optimize
+        this.gameObjectInput.gameObject3D.removeFromParent();
+        this.setCurrentGameObject3DJSON(this.currentGameObject3D.toJSON());
+      };
+    }
+
+    const possibleIdRenderData = [null]; // idRenderData can be null
+    for (const id in assetManager.renderData) possibleIdRenderData.push(id);
+    const possibleIdSounds = [];
+    for (const id in assetManager.sounds) possibleIdSounds.push(id);
+
+    /** @type {Array&lt;import("./objectInput/ObjectInput")>} */
+    const externalScriptVariablesInputs =
+      options.externalScriptVariablesInputs || [];
+    for (const className in nativeExternalScriptVariablesInputs)
+      externalScriptVariablesInputs.push(
+        nativeExternalScriptVariablesInputs[className]
+      );
+
+    /** @type {Array&lt;import("./objectInput/ObjectInput")>} */
+    const gameScriptVariablesInputs = options.gameScriptVariablesInputs || [];
+    for (const className in nativeGameScriptVariablesInput)
+      gameScriptVariablesInputs.push(nativeGameScriptVariablesInput[className]);
+
+    /** @type {Array&lt;import("./objectInput/ObjectInput")>} */
+    const userDataInputs = options.userDataInputs || [];
+    for (const className in nativeUserDataInputs)
+      userDataInputs.push(nativeUserDataInputs[className]);
+
+    /** @type {GameObject3DInput} */
+    this.gameObjectInput = new GameObject3DInput(
+      possibleIdRenderData,
+      possibleIdSounds,
+      options.possibleGameScriptIds,
+      options.possibleExternalScriptIds,
+      gameScriptVariablesInputs,
+      externalScriptVariablesInputs,
+      userDataInputs
+    );
+    this.gameObjectInput.setAttribute('id', 'select_game_object_3d');
+    this.leftPan.appendChild(this.gameObjectInput);
+
+    // update when input transform changed
+    this.gameObjectInput.addEventListener(
+      GameObject3DInput.EVENT.TRANSFORM_CHANGED,
+      () => {
+        this.updateCollider();
+        this.updateBox3();
+      }
+    );
+
+    // update when id render data changed
+    this.gameObjectInput.addEventListener(
+      GameObject3DInput.EVENT.ID_RENDER_DATA_CHANGED,
+      () => {
+        this.updateBox3();
+      }
+    );
+
+    // update when component is add/remove
+    {
+      this.gameObjectInput.addEventListener(
+        GameObject3DInput.EVENT.COMPONENT_ADD,
+        (event) => {
+          let newComponent = null;
+          switch (event.detail.type) {
+            case RenderComponent.TYPE:
+              newComponent = new RenderComponent();
+              this.gameObjectInput.gameObject3D.components[
+                RenderComponent.TYPE
+              ] = newComponent;
+              newComponent.initController(
+                new RenderController(
+                  newComponent.model,
+                  this.gameObjectInput.gameObject3D,
+                  this.assetManager
+                )
+              );
+              break;
+            case AudioComponent.TYPE:
+              this.gameObjectInput.gameObject3D.components[
+                AudioComponent.TYPE
+              ] = new AudioComponent();
+              break;
+            case GameScriptComponent.TYPE:
+              this.gameObjectInput.gameObject3D.components[
+                GameScriptComponent.TYPE
+              ] = new GameScriptComponent();
+              break;
+            case ExternalScriptComponent.TYPE:
+              this.gameObjectInput.gameObject3D.components[
+                ExternalScriptComponent.TYPE
+              ] = new ExternalScriptComponent();
+              break;
+            case ColliderComponent.TYPE:
+              this.gameObjectInput.gameObject3D.components[
+                ColliderComponent.TYPE
+              ] = new ColliderComponent();
+              break;
+            default:
+              throw new Error('Unknown component type');
+          }
+
+          this.selectGameObject3D(this.gameObjectInput.gameObject3D, true); // refresh
+        }
+      );
+      this.gameObjectInput.addEventListener(
+        GameObject3DInput.EVENT.COMPONENT_REMOVE,
+        (event) => {
+          if (event.detail.type == RenderComponent.TYPE) {
+            const renderComponent =
+              this.gameObjectInput.gameObject3D.getComponent(
+                RenderComponent.TYPE
+              );
+            renderComponent.controller.dispose(); // the only one with a controller
+          } else if (
+            (this.currentObjectInput &amp;&amp;
+              event.detail.type == GameScriptComponent.TYPE &amp;&amp;
+              this.currentObjectInput.type == ObjectInput.TYPE.GAME_SCRIPT) ||
+            (this.currentObjectInput &amp;&amp;
+              event.detail.type == ExternalScriptComponent.TYPE &amp;&amp;
+              this.currentObjectInput.type == ObjectInput.TYPE.EXTERNAL_SCRIPT)
+          ) {
+            // was editing the concerned component
+            this.currentObjectInput.dispose();
+          }
+
+          delete this.gameObjectInput.gameObject3D.components[
+            event.detail.type
+          ];
+          this.selectGameObject3D(this.gameObjectInput.gameObject3D, true); // refresh
+        }
+      );
+    }
+
+    /** @type {OrbitControls} */
+    this.orbitControls = new OrbitControls(
+      this.frame3D.camera,
+      this.frame3D.domElementWebGL
+    );
+
+    /** @type {TransformControls} */
+    this.transformControls = new TransformControls(
+      this.frame3D.camera,
+      this.frame3D.domElementWebGL
+    );
+    // transform controls
+    {
+      this.frame3D.scene.add(this.transformControls);
+
+      this.transformControls.addEventListener('dragging-changed', (event) => {
+        this.orbitControls.enabled = !event.value;
+      });
+
+      this.transformControls.addEventListener('change', () => {
+        this.gameObjectInput.updateTransform();
+      });
+      this.transformControls.addEventListener('mouseUp', () => {
+        if (!this.shapeContext.pointMesh) {
+          // editing go transform
+          this.updateCollider();
+          this.updateBox3();
+        } else {
+          if (
+            this.shapeContext.pointMesh.userData.shapeJSON.type ==
+            ColliderComponent.SHAPE_TYPE.POLYGON
+          ) {
+            // editing point shape in model
+            this.shapeContext.pointMesh.userData.shapeJSON.points[
+              this.shapeContext.pointMesh.userData.index
+            ] = {
+              x: this.shapeContext.pointMesh.position.x,
+              y: this.shapeContext.pointMesh.position.y,
+              z: this.shapeContext.pointMesh.position.z,
+            };
+            const indexPointSelected =
+              this.shapeContext.pointMesh.userData.index;
+            this.updateShapeSelected();
+            this.selectPointMesh(
+              this.pointsParent.children[indexPointSelected]
+            );
+          } else {
+            // circle center edited
+            this.shapeContext.pointMesh.userData.shapeJSON.center = {
+              x: this.shapeContext.pointMesh.position.x,
+              y: this.shapeContext.pointMesh.position.y,
+              z: this.shapeContext.pointMesh.position.z,
+            };
+            this.updateShapeSelected();
+          }
+        }
+      });
+    }
+
+    // gizmo mode ui
+    {
+      const addButtonMode = (mode) => {
+        const buttonMode = document.createElement('button');
+        buttonMode.innerText = mode;
+        this.toolsDomElement.appendChild(buttonMode);
+
+        buttonMode.onclick = () => {
+          this.transformControls.setMode(mode);
+        };
+      };
+      addButtonMode('translate');
+      addButtonMode('rotate');
+      addButtonMode('scale');
+    }
+
+    /** @type {HTMLElement} */
+    this.buttonTargetGameObject3D = document.createElement('button');
+    this.buttonTargetGameObject3D.innerText = 'Target';
+    this.toolsDomElement.appendChild(this.buttonTargetGameObject3D);
+
+    /** @type {GameObject3D|null} */
+    this.currentGameObject3D = null;
+
+    /** @type {Box3} */
+    this.currentGameObjectMeshBox3 = new Mesh(
+      new BoxGeometry(),
+      new MeshBasicMaterial({ color: 'black', wireframe: true })
+    );
+    {
+      this.currentGameObjectMeshBox3.name = 'currentGameObjectMeshBox3';
+      this.frame3D.scene.add(this.currentGameObjectMeshBox3);
+      this.gameObjectInput.addEventListener(
+        GameObject3DInput.EVENT.TRANSFORM_CHANGED,
+        () => {
+          this.updateBox3();
+          this.updateCollider();
+        }
+      );
+    }
+
+    // camera move
+    {
+      const selectCameraPOV = document.createElement('select');
+      this.toolsDomElement.appendChild(selectCameraPOV);
+
+      const buffer = new Map();
+      const addOption = (label, callback) => {
+        const option = document.createElement('option');
+        option.innerText = label;
+        option.value = label;
+        buffer.set(label, callback);
+        selectCameraPOV.appendChild(option);
+      };
+
+      selectCameraPOV.oninput = () => {
+        const radius = this.frame3D.camera.position.distanceTo(
+          this.orbitControls.target
+        );
+        this.frame3D.camera.position.copy(this.orbitControls.target);
+        buffer.get(selectCameraPOV.selectedOptions[0].value)(radius);
+        this.frame3D.camera.updateMatrixWorld();
+        this.orbitControls.update();
+      };
+
+      addOption('+X', (radius) => {
+        this.frame3D.camera.position.x += radius;
+      });
+      addOption('-X', (radius) => {
+        this.frame3D.camera.position.x -= radius;
+      });
+      addOption('+Y', (radius) => {
+        this.frame3D.camera.position.y += radius;
+      });
+      addOption('-Y', (radius) => {
+        this.frame3D.camera.position.y -= radius;
+      });
+      addOption('+Z', (radius) => {
+        this.frame3D.camera.position.z += radius;
+      });
+      addOption('-Z', (radius) => {
+        this.frame3D.camera.position.z -= radius;
+      });
+    }
+
+    // collider object3d
+    /** @type {Object3D} */
+    this.colliderParent = new Object3D();
+    this.colliderParent.name = 'colliderParent';
+    this.frame3D.scene.add(this.colliderParent);
+
+    this.gameObjectInput.addEventListener(
+      GameObject3DInput.EVENT.SHAPE_ADDED,
+      (event) => {
+        this.updateCollider();
+        this.selectShape(event.detail.shapeIndexCreated);
+      }
+    );
+
+    /** @type {object} */
+    this.shapeContext = {
+      mesh: null,
+      deleteButton: null,
+      radiusUI: null,
+      pointMesh: null,
+    };
+    this.pointsParent = new Object3D();
+    {
+      this.frame3D.scene.add(this.pointsParent);
+
+      const raycaster = new Raycaster();
+      window.addEventListener('keydown', (event) => {
+        if (event.key == 'Escape') this.selectShape(-1);
+        else if (event.key == 'Delete' &amp;&amp; this.shapeContext.pointMesh) {
+          // can only remove point of polygon
+          if (
+            this.shapeContext.pointMesh.userData.shapeJSON.type !=
+            ColliderComponent.SHAPE_TYPE.POLYGON
+          )
+            return;
+
+          if (
+            this.shapeContext.pointMesh.userData.shapeJSON.points.length &lt; 5
+          ) {
+            alert('a polygon must have at least 4 points');
+          } else {
+            // delete this point
+            this.shapeContext.pointMesh.userData.shapeJSON.points.splice(
+              this.shapeContext.pointMesh.userData.index,
+              1
+            );
+            this.updateShapeSelected();
+          }
+        }
+      });
+      this.frame3D.domElementWebGL.addEventListener('click', (event) => {
+        const mouse = new Vector2(
+          (event.clientX / this.frame3D.domElementWebGL.clientWidth) * 2 - 1,
+          -(event.clientY / this.frame3D.domElementWebGL.clientHeight) * 2 + 1
+        );
+        raycaster.setFromCamera(mouse, this.frame3D.camera);
+
+        if (!this.shapeContext.mesh) {
+          // look for intersect with shape mesh
+          const intersects = raycaster.intersectObject(
+            this.colliderParent,
+            true
+          );
+          if (intersects.length) {
+            const index = this.colliderParent.children.indexOf(
+              intersects[0].object
+            );
+            this.selectShape(index);
+          }
+        } else {
+          if (event.ctrlKey) {
+            // add a point
+            const intersects = raycaster.intersectObject(
+              this.gameObjectInput.gameObject3D,
+              true
+            );
+            if (intersects.length) {
+              const point = intersects[0].point;
+              const index = this.colliderParent.children.indexOf(
+                this.shapeContext.mesh
+              );
+              const colliderComp =
+                this.gameObjectInput.gameObject3D.getComponent(
+                  ColliderComponent.TYPE
+                );
+              // in gameobject referential
+              const invMatrixWorld = this.pointsParent.matrixWorld
+                .clone()
+                .invert();
+              point.applyMatrix4(invMatrixWorld);
+
+              colliderComp.model.shapesJSON[index].points.push({
+                x: point.x,
+                y: point.y,
+                z: point.z,
+              });
+              this.updateShapeSelected();
+            }
+          } else {
+            // look for intersect with points shape
+            const intersects = raycaster.intersectObject(
+              this.pointsParent,
+              true
+            );
+            if (intersects.length) {
+              this.selectPointMesh(intersects[0].object);
+            }
+          }
+        }
+      });
+    }
+
+    // object input
+    {
+      /** @type {import("./objectInput/ObjectInput")|null} */
+      this.currentObjectInput = null;
+
+      // object input creation
+      this.gameObjectInput.addEventListener(
+        GameObject3DInput.EVENT.OBJECT_INPUT_CREATION,
+        (event) => {
+          if (this.currentObjectInput) this.currentObjectInput.dispose(); // only one script input at once
+
+          let domElement, object;
+          switch (event.detail.typeObjectInput) {
+            case ObjectInput.TYPE.USER_DATA:
+              domElement = this.gameObjectInput.userDataInputDomElement;
+              object = this.gameObjectInput.gameObject3D.userData;
+              break;
+            case ObjectInput.TYPE.GAME_SCRIPT:
+              domElement = this.gameObjectInput.gameScriptInputDomElement;
+              object = this.gameObjectInput.gameObject3D.getComponent(
+                GameScriptComponent.TYPE
+              ).model.variables;
+              break;
+            case ObjectInput.TYPE.EXTERNAL_SCRIPT:
+              domElement = this.gameObjectInput.externalScriptInputDomElement;
+              object = this.gameObjectInput.gameObject3D.getComponent(
+                ExternalScriptComponent.TYPE
+              ).model.variables;
+              break;
+            default:
+              throw new Error('Unknown object input type');
+          }
+
+          this.currentObjectInput = new event.detail.ClassObjectInput(
+            event.detail.typeObjectInput,
+            this,
+            object,
+            domElement
+          );
+          this.currentObjectInput.init();
+        }
+      );
+
+      this.gameObjectInput.addEventListener(
+        GameObject3DInput.EVENT.SCRIPT_DELETED,
+        (event) => {
+          if (
+            this.currentObjectInput &amp;&amp; // one current object input
+            this.currentObjectInput.condition(event.detail.id) // its a script variables object input + one that's the one editing the deleted script
+          )
+            this.currentObjectInput.dispose(); // dispose it
+        }
+      );
+    }
+
+    /** @type {RequestAnimationFrameProcess} */
+    this.process = new RequestAnimationFrameProcess(30);
+
+    // scale point mesh to have constant size on screen
+    this.scaleShapePoints = () => {
+      this.pointsParent.traverse((point) => {
+        if (point.geometry) {
+          const scale =
+            this.frame3D.camera.position.distanceTo(
+              point.position.clone().add(this.pointsParent.position)
+            ) / 80;
+          point.scale.set(scale, scale, scale);
+        }
+      });
+    };
+
+    const scaleShapePointsThrottle = throttle(
+      this.scaleShapePoints.bind(this),
+      100
+    );
+
+    this.process.start((dt) => {
+      scaleShapePointsThrottle();
+      this.transformControls.updateMatrixWorld();
+      this.frame3D.render();
+      if (this.currentObjectInput) this.currentObjectInput.tick(dt);
+    });
+
+    // move game object 3d in hierarchy
+    {
+      // select game object 3d move
+      this.selectParentGameObject3DMove = document.createElement('select');
+
+      // move button
+      const moveButton = document.createElement('button');
+      moveButton.innerText = 'Move selected gameobject3D to';
+      this.toolsDomElement.appendChild(moveButton);
+      this.toolsDomElement.appendChild(this.selectParentGameObject3DMove);
+
+      moveButton.onclick = () => {
+        const selectedGameObject3DUUID = this.gameObjectInput.gameObject3D.uuid;
+        this.gameObjectInput.gameObject3D.removeFromParent();
+        const parent = this.currentGameObject3D.getFirst(
+          (o) =>
+            o.uuid == this.selectParentGameObject3DMove.selectedOptions[0].value
+        );
+        parent.add(this.gameObjectInput.gameObject3D);
+        this.setCurrentGameObject3DJSON(this.currentGameObject3D.toJSON());
+        this.selectGameObject3D(
+          this.currentGameObject3D.getFirst(
+            (o) => o.uuid == selectedGameObject3DUUID
+          )
+        );
+      };
+    }
+
+    // shortcut
+    {
+      window.addEventListener('keydown', (event) => {
+        if (event.key == 'f')
+          this.setOrbitControlsTargetTo(this.gameObjectInput.gameObject3D);
+      });
+    }
+  }
+
+  /**
+   *
+   * @param {object} gameObject3DJSON - json of the gameobject to set
+   */
+  setCurrentGameObject3DJSON(gameObject3DJSON) {
+    const gameObject3D = new GameObject3D(objectParseNumeric(gameObject3DJSON));
+
+    console.log('editor open ', gameObject3D);
+    if (this.currentGameObject3D) {
+      this.currentGameObject3D.removeFromParent();
+    }
+
+    this.currentGameObject3D = gameObject3D;
+
+    // init render gameobject3d
+    this.currentGameObject3D.traverse((child) => {
+      if (!child.isGameObject3D) return;
+      child.matrixAutoUpdate = true; // disable .static optimization
+
+      const renderComp = child.getComponent(RenderComponent.TYPE);
+      if (renderComp) {
+        renderComp.initController(
+          new RenderController(renderComp.getModel(), child, this.assetManager)
+        );
+      }
+    });
+
+    this.frame3D.scene.add(this.currentGameObject3D);
+
+    const createGameObject3DUI = (go, indent = 0) => {
+      if (!go.isGameObject3D) return null;
+
+      let result = null;
+
+      const hasChildrenGameObject =
+        go.children.filter((el) => el.isGameObject3D).length != 0;
+      const _this = this;
+
+      if (hasChildrenGameObject) {
+        result = document.createElement('details');
+        const summary = document.createElement('summary');
+        summary.classList.add('editor_clickable');
+        summary.innerText = go.name;
+        this.gameObjectInput.addEventListener(
+          GameObject3DInput.EVENT.NAME_CHANGED,
+          () => {
+            summary.innerText = go.name;
+          }
+        );
+
+        result.style.marginLeft = 10 * indent + 'px';
+        result.appendChild(summary);
+
+        summary.onclick = function (event) {
+          if (this == event.target) {
+            _this.selectGameObject3D(go);
+          }
+        };
+
+        indent++;
+        go.children.forEach((child) => {
+          const childResult = createGameObject3DUI(child, indent);
+          if (!childResult) return;
+          result.appendChild(childResult);
+        });
+      } else {
+        result = document.createElement('div');
+        result.classList.add('editor_clickable');
+        result.innerText = go.name;
+        this.gameObjectInput.addEventListener(
+          GameObject3DInput.EVENT.NAME_CHANGED,
+          () => {
+            result.innerText = go.name;
+          }
+        );
+
+        result.style.marginLeft = 20 * indent + 'px';
+        result.onclick = function (event) {
+          if (this == event.target) {
+            _this.selectGameObject3D(go);
+          }
+        };
+      }
+
+      return result;
+    };
+
+    while (this.currentGODomelement.firstChild) {
+      this.currentGODomelement.firstChild.remove();
+    }
+    this.currentGODomelement.appendChild(
+      createGameObject3DUI(this.currentGameObject3D)
+    );
+
+    this.selectGameObject3D(this.currentGameObject3D);
+  }
+
+  /**
+   * Move camera to focus current game object 3d
+   */
+  focusCurrentGameObject3D() {
+    // move camera to fit the scene
+    const bb = Editor.computeBox3GameObject3D(this.currentGameObject3D);
+    const center = new Vector3();
+    bb.getCenter(center);
+    cameraFitRectangle(this.frame3D.camera, bb.min, bb.max, bb.max.z);
+    this.setOrbitControlsTargetTo(this.currentGameObject3D);
+  }
+
+  /**
+   *
+   * @param {Object3D} obj - object 3d to target
+   */
+  setOrbitControlsTargetTo(obj) {
+    const bb = Editor.computeBox3GameObject3D(obj);
+    const center = new Vector3();
+    bb.getCenter(center);
+    this.orbitControls.target.copy(center);
+    this.orbitControls.update();
+  }
+
+  /**
+   *
+   * @param {GameObject3D} go - game object 3d to select for edition
+   * @param {boolean} force - force even if the selected gameobject3d is the same
+   */
+  selectGameObject3D(go, force = false) {
+    if (go == this.gameObjectInput.gameObject3D &amp;&amp; !force) return;
+
+    if (this.currentObjectInput) this.currentObjectInput.dispose();
+
+    // game input dom element
+    this.gameObjectInput.setGameObject3D(go);
+    // bind
+    this.buttonTargetGameObject3D.onclick = this.setOrbitControlsTargetTo.bind(
+      this,
+      go
+    );
+    this.transformControls.attach(go);
+    this.updateBox3();
+    this.updateCollider();
+    this.updateSelectGameObjectMoveParent();
+  }
+
+  updateSelectGameObjectMoveParent() {
+    while (this.selectParentGameObject3DMove.firstChild)
+      this.selectParentGameObject3DMove.firstChild.remove();
+
+    // root gameobject3D cant me move
+    if (!this.gameObjectInput.gameObject3D.parent.isGameObject3D) return;
+
+    this.currentGameObject3D.traverse((child) => {
+      if (
+        !child.isGameObject3D ||
+        child == this.gameObjectInput.gameObject3D ||
+        child == this.gameObjectInput.gameObject3D.parent
+      )
+        return; // cant move to itself or to the current one
+
+      const option = document.createElement('option');
+      option.innerText = child.name;
+      option.value = child.uuid;
+      this.selectParentGameObject3DMove.appendChild(option);
+    });
+  }
+
+  /**
+   * Update collider shapes in the 3D scene
+   */
+  updateCollider() {
+    for (let i = this.colliderParent.children.length - 1; i >= 0; i--) {
+      this.colliderParent.children[i].removeFromParent();
+    }
+    this.selectShape(-1);
+
+    /** @type {GameObject3D} */
+    const go = this.gameObjectInput.gameObject3D;
+
+    const colliderComp = go.getComponent(ColliderComponent.TYPE);
+    if (colliderComp) {
+      const worldPosition = new Vector3();
+      const worldQuaternion = new Quaternion();
+      const worldScale = new Vector3();
+
+      go.matrixWorld.decompose(worldPosition, worldQuaternion, worldScale);
+
+      this.colliderParent.position.copy(worldPosition);
+      this.colliderParent.quaternion.copy(worldQuaternion);
+      this.colliderParent.scale.copy(worldScale);
+
+      colliderComp.model.shapesJSON.forEach((shape) => {
+        let geometry = null;
+
+        switch (shape.type) {
+          case ColliderComponent.SHAPE_TYPE.CIRCLE:
+            geometry = new CircleGeometry(shape.radius, 32);
+            geometry.translate(shape.center.x, shape.center.y, shape.center.z);
+            break;
+          case ColliderComponent.SHAPE_TYPE.POLYGON:
+            geometry = new ConvexGeometry(
+              shape.points.map((el) => new Vector3(el.x, el.y, el.z))
+            );
+            break;
+          default:
+            throw new Error('unknown shape type');
+        }
+        this.colliderParent.add(new Mesh(geometry, COLLIDER_MATERIAL));
+      });
+    }
+  }
+
+  /**
+   *
+   * @param {number} shapeIndex - index of the shape to select
+   */
+  selectShape(shapeIndex) {
+    // reset state
+    if (this.shapeContext.mesh) {
+      this.shapeContext.mesh.material = COLLIDER_MATERIAL;
+      this.shapeContext.mesh = null;
+    }
+    if (this.shapeContext.deleteButton) {
+      this.shapeContext.deleteButton.remove();
+      this.shapeContext.deleteButton = null;
+    }
+    if (this.shapeContext.radiusUI) {
+      this.shapeContext.radiusUI.parent.remove();
+      this.shapeContext.radiusUI = null;
+    }
+    this.shapeContext.pointMesh = null;
+
+    for (let i = this.pointsParent.children.length - 1; i >= 0; i--) {
+      this.pointsParent.children[i].removeFromParent();
+    }
+
+    // assign new index
+    this.shapeContext.mesh = this.colliderParent.children[shapeIndex];
+
+    // set new stateContext state
+    if (this.shapeContext.mesh) {
+      this.setOrbitControlsTargetTo(this.shapeContext.mesh);
+      this.shapeContext.mesh.material = COLLIDER_MATERIAL_SELECTED;
+
+      const colliderComp = this.gameObjectInput.gameObject3D.getComponent(
+        ColliderComponent.TYPE
+      );
+
+      this.shapeContext.deleteButton = document.createElement('button');
+      this.shapeContext.deleteButton.innerText = 'delete shape';
+      this.shapeContext.deleteButton.onclick = () => {
+        colliderComp.model.shapesJSON.splice(shapeIndex, 1);
+        this.updateCollider();
+      };
+
+      if (
+        colliderComp.model.shapesJSON[shapeIndex].type ==
+        ColliderComponent.SHAPE_TYPE.CIRCLE
+      ) {
+        // add ui to set radius
+        this.shapeContext.radiusUI = createLabelInput('Radius ', 'number');
+        this.gameObjectInput.detailsCollider.appendChild(
+          this.shapeContext.radiusUI.parent
+        );
+
+        // init
+        this.shapeContext.radiusUI.input.value =
+          colliderComp.model.shapesJSON[shapeIndex].radius;
+
+        this.shapeContext.radiusUI.input.onchange = () => {
+          const newRadius = this.shapeContext.radiusUI.input.valueAsNumber;
+          if (newRadius &lt; 0.01) {
+            alert('radius must superior at 0.01');
+          } else {
+            colliderComp.model.shapesJSON[shapeIndex].radius = newRadius;
+            this.updateShapeSelected();
+          }
+        };
+      }
+
+      this.gameObjectInput.detailsCollider.appendChild(
+        this.shapeContext.deleteButton
+      );
+
+      this.updateShapeSelected(false); // no need to rebuild shape geometry
+    } else {
+      this.transformControls.attach(this.gameObjectInput.gameObject3D);
+    }
+  }
+
+  /**
+   *
+   * @param {Mesh} mesh - point mesh to select with transform controls
+   */
+  selectPointMesh(mesh) {
+    this.shapeContext.pointMesh = mesh;
+    this.transformControls.attach(this.shapeContext.pointMesh);
+  }
+
+  /**
+   * Update shape selected (when a property of the shape has changed)
+   *
+   * @param {boolean} rebuildShapeGeometry - shape selected needs to rebuild its geometry
+   */
+  updateShapeSelected(rebuildShapeGeometry = true) {
+    // remove all old point meshes
+    for (let i = this.pointsParent.children.length - 1; i >= 0; i--) {
+      this.pointsParent.children[i].removeFromParent();
+    }
+
+    // reset transform controls
+    this.transformControls.detach();
+
+    // unreference this.shapeContext.pointMesh
+    this.shapeContext.pointMesh = null;
+
+    // transform pointParent in referential of the current gameobject3D
+    const worldPosition = new Vector3();
+    const worldQuaternion = new Quaternion();
+    const worldScale = new Vector3();
+    this.gameObjectInput.gameObject3D.matrixWorld.decompose(
+      worldPosition,
+      worldQuaternion,
+      worldScale
+    );
+
+    this.pointsParent.position.copy(worldPosition);
+    this.pointsParent.quaternion.copy(worldQuaternion);
+    this.pointsParent.scale.copy(worldScale);
+
+    // retrieve shapeJSON
+    const colliderComp = this.gameObjectInput.gameObject3D.getComponent(
+      ColliderComponent.TYPE
+    );
+    const index = this.colliderParent.children.indexOf(this.shapeContext.mesh);
+    const shapeJSON = colliderComp.model.shapesJSON[index];
+
+    // rebuild shape + point mesh
+    if (shapeJSON.type == ColliderComponent.SHAPE_TYPE.POLYGON) {
+      if (rebuildShapeGeometry) {
+        this.shapeContext.mesh.geometry = new ConvexGeometry(
+          shapeJSON.points.map((el) => new Vector3(el.x, el.y, el.z))
+        );
+        console.trace('shape rebuilded with ', shapeJSON);
+      }
+
+      shapeJSON.points.forEach((point, index) => {
+        const pointMesh = new Mesh(
+          new SphereGeometry(0.6),
+          COLLIDER_POINT_MATERIAL
+        );
+        pointMesh.position.set(point.x, point.y, point.z);
+        pointMesh.userData.index = index;
+        pointMesh.userData.shapeJSON = shapeJSON; // userdata used at the end of transform controls
+        this.pointsParent.add(pointMesh);
+      });
+    } else if (shapeJSON.type == ColliderComponent.SHAPE_TYPE.CIRCLE) {
+      if (rebuildShapeGeometry) {
+        this.shapeContext.mesh.geometry = new CircleGeometry(
+          shapeJSON.radius,
+          32
+        );
+        this.shapeContext.mesh.geometry.translate(
+          shapeJSON.center.x,
+          shapeJSON.center.y,
+          shapeJSON.center.z
+        );
+        console.trace('shape rebuilded with ', shapeJSON);
+      }
+      const pointMesh = new Mesh(
+        new SphereGeometry(0.6),
+        COLLIDER_POINT_MATERIAL
+      );
+      pointMesh.position.set(
+        shapeJSON.center.x,
+        shapeJSON.center.y,
+        shapeJSON.center.z
+      );
+      pointMesh.userData.shapeJSON = shapeJSON; // userdata used at the end of transform controls
+      this.pointsParent.add(pointMesh);
+      this.selectPointMesh(pointMesh);
+    }
+
+    if (rebuildShapeGeometry) this.scaleShapePoints();
+  }
+
+  /**
+   * Update box3 wrapping selected game object 3d
+   */
+  updateBox3() {
+    this.gameObjectInput.gameObject3D.updateMatrixWorld();
+    const worldQuaternion = new Quaternion();
+    this.gameObjectInput.gameObject3D.matrixWorld.decompose(
+      new Vector3(),
+      worldQuaternion,
+      new Vector3()
+    );
+
+    const inverseWorldQuaternion = worldQuaternion.clone().invert();
+
+    // cancel quaternion
+    this.gameObjectInput.gameObject3D.quaternion.multiply(
+      inverseWorldQuaternion
+    );
+
+    const bbScale = Editor.computeBox3GameObject3D(
+      this.gameObjectInput.gameObject3D
+    );
+    this.currentGameObjectMeshBox3.scale.copy(
+      bbScale.max.clone().sub(bbScale.min)
+    );
+
+    // restore quaternion
+    this.gameObjectInput.gameObject3D.quaternion.multiply(worldQuaternion);
+
+    const bbPosition = Editor.computeBox3GameObject3D(
+      this.gameObjectInput.gameObject3D
+    );
+    bbPosition.getCenter(this.currentGameObjectMeshBox3.position);
+
+    this.currentGameObjectMeshBox3.quaternion.copy(worldQuaternion);
+    this.currentGameObjectMeshBox3.updateMatrixWorld();
+  }
+
+  /**
+   *
+   * @param {Object3D} obj - object 3d to compute box3
+   * @returns {Box3} - box 3 of the object 3d
+   */
+  static computeBox3GameObject3D(obj) {
+    const bb = new Box3().setFromObject(obj);
+
+    // avoid bug if no renderdata on this gameobject
+    const checkIfCoordInfinite = function (value) {
+      return value === Infinity || value === -Infinity;
+    };
+    const checkIfVectorHasCoordInfinite = function (vector) {
+      return (
+        checkIfCoordInfinite(vector.x) ||
+        checkIfCoordInfinite(vector.y) ||
+        checkIfCoordInfinite(vector.z)
+      );
+    };
+
+    if (
+      checkIfVectorHasCoordInfinite(bb.min) ||
+      checkIfVectorHasCoordInfinite(bb.max)
+    ) {
+      // cube 1,1,1
+      bb.min.set(-0.5, -0.5, -0.5);
+      bb.max.set(0.5, 0.5, 0.5);
+
+      bb.applyMatrix4(obj.matrixWorld);
+    }
+    return bb;
+  }
+}
+
+/** @class Custom HTML element that provides a user interface for editing various components and properties of a 3D game object.*/
+class GameObject3DInput extends HTMLElement {
+  /**
+   *
+   * @param {Array&lt;string>} idRenderDatas - possible id render datas to set in RenderComponent
+   * @param {Array&lt;string>} idSounds - possible id sound to set in AudioComponent
+   * @param {Array&lt;string>} idGameScripts - possible id game script to set in GameScriptComponent
+   * @param {Array&lt;string>} idExternalScripts - possible id external script to set in ExternalScriptComponent
+   * @param {Array&lt;string>} gameScriptVariablesInputs - object inputs to edit .variables of GameScriptComponent
+   * @param {Array&lt;string>} externalScriptVariablesInputs - object inputs to edit .variables of ExternalScriptComponent
+   * @param {Array&lt;string>} userDataInputs - object inputs to edit .userData
+   */
+  constructor(
+    idRenderDatas,
+    idSounds,
+    idGameScripts,
+    idExternalScripts,
+    gameScriptVariablesInputs,
+    externalScriptVariablesInputs,
+    userDataInputs
+  ) {
+    super();
+
+    /** @type {Array} */
+    this.idRenderDatas = idRenderDatas;
+
+    /** @type {Array} */
+    this.idSounds = idSounds;
+
+    /** @type {Array} */
+    this.idGameScripts = idGameScripts || [];
+
+    /** @type {Array} */
+    this.idExternalScripts = idExternalScripts || [];
+
+    /** @type {Array} */
+    this.gameScriptVariablesInputs = gameScriptVariablesInputs || [];
+
+    /** @type {Array} */
+    this.externalScriptVariablesInputs = externalScriptVariablesInputs || [];
+
+    /** @type {Array} */
+    this.userDataInputs = userDataInputs || [];
+
+    /** @type {GameObject3D|null} */
+    this.gameObject3D = null;
+
+    // Name
+    this.nameLabelInput = createLabelInput('Name: ', 'text');
+    this.appendChild(this.nameLabelInput.parent);
+
+    this.nameLabelInput.input.onchange = () => {
+      this.gameObject3D.name = this.nameLabelInput.input.value;
+      this.dispatchEvent(new CustomEvent(GameObject3DInput.EVENT.NAME_CHANGED));
+    };
+
+    // Static
+    this.static = createLabelInput('Static: ', 'checkbox');
+    this.appendChild(this.static.parent);
+
+    this.static.input.onchange = () => {
+      this.gameObject3D.static = this.static.input.checked;
+    };
+
+    // Visible
+    this.visible = createLabelInput('Visible: ', 'checkbox');
+    this.appendChild(this.visible.parent);
+
+    this.visible.input.onchange = () => {
+      this.gameObject3D.visible = this.visible.input.checked;
+    };
+
+    // transform
+    const detailsTransform = document.createElement('details');
+    this.appendChild(detailsTransform);
+    const summaryTransform = document.createElement('summary');
+    summaryTransform.innerText = 'Transform';
+    detailsTransform.appendChild(summaryTransform);
+
+    this.position = new Vector3Input('Position', 0.1);
+    detailsTransform.appendChild(this.position);
+
+    this.rotation = new Vector3Input('Rotation', 0.01);
+    detailsTransform.appendChild(this.rotation);
+
+    this.scale = new Vector3Input('Scale', 0.1);
+    detailsTransform.appendChild(this.scale);
+
+    this.position.addEventListener('change', () => {
+      this.gameObject3D.position.set(
+        this.position.x.input.valueAsNumber,
+        this.position.y.input.valueAsNumber,
+        this.position.z.input.valueAsNumber
+      );
+      this.dispatchEvent(
+        new CustomEvent(GameObject3DInput.EVENT.TRANSFORM_CHANGED)
+      );
+    });
+    this.rotation.addEventListener('change', () => {
+      this.gameObject3D.rotation.set(
+        this.rotation.x.input.valueAsNumber,
+        this.rotation.y.input.valueAsNumber,
+        this.rotation.z.input.valueAsNumber
+      );
+      this.dispatchEvent(
+        new CustomEvent(GameObject3DInput.EVENT.TRANSFORM_CHANGED)
+      );
+    });
+    this.scale.addEventListener('change', () => {
+      this.gameObject3D.scale.set(
+        this.scale.x.input.valueAsNumber,
+        this.scale.y.input.valueAsNumber,
+        this.scale.z.input.valueAsNumber
+      );
+      this.dispatchEvent(
+        new CustomEvent(GameObject3DInput.EVENT.TRANSFORM_CHANGED)
+      );
+    });
+
+    // userdata
+    this.detailsUserData = document.createElement('details');
+    this.appendChild(this.detailsUserData);
+    this.userDataInputDomElement = null;
+
+    // collider
+    this.detailsCollider = document.createElement('details');
+    this.appendChild(this.detailsCollider);
+
+    // render
+    this.detailsRender = document.createElement('details');
+    this.appendChild(this.detailsRender);
+
+    // audio
+    this.detailsAudio = document.createElement('details');
+    this.appendChild(this.detailsAudio);
+
+    // game script
+    this.detailsGameScript = document.createElement('details');
+    this.appendChild(this.detailsGameScript);
+    /** @type {HTMLElement} */
+    this.gameScriptInputDomElement = null;
+
+    // external script
+    this.detailsExternalScript = document.createElement('details');
+    this.appendChild(this.detailsExternalScript);
+    this.externalScriptInputDomElement = null;
+
+    // no gameobject3d set at the construction
+    this.hidden = true;
+  }
+
+  /**
+   *
+   * @param {GameObject3D} go - go to select in the game object 3d input
+   */
+  setGameObject3D(go) {
+    if (!go) {
+      this.hidden = true;
+      return;
+    }
+    this.hidden = false;
+
+    this.gameObject3D = go;
+
+    this.nameLabelInput.input.value = go.name;
+
+    this.static.input.checked = go.static;
+
+    this.visible.input.checked = go.visible;
+
+    // transform
+    this.updateTransform();
+
+    // userdata
+    this.updateUserData();
+
+    // collider
+    this.updateCollider();
+
+    // render
+    this.updateRender();
+
+    // audio
+    this.updateAudio();
+
+    // game script
+    this.updateGameScript();
+
+    // external script
+    this.updateExternalScript();
+  }
+
+  /**
+   * Update userData edition of the current game object 3d
+   */
+  updateUserData() {
+    let CurrentClassObjectInput = null;
+    for (let index = 0; index &lt; this.userDataInputs.length; index++) {
+      const ClassObjectInput = this.userDataInputs[index];
+      // userdata inputs take an gameobject3D as condition
+      if (ClassObjectInput.condition(this.gameObject3D)) {
+        CurrentClassObjectInput = ClassObjectInput;
+        break;
+      }
+    }
+
+    if (CurrentClassObjectInput) {
+      this.detailsUserData.hidden = false;
+
+      while (this.detailsUserData.firstChild)
+        this.detailsUserData.firstChild.remove();
+
+      const summary = document.createElement('summary');
+      summary.innerText = 'userData';
+      this.detailsUserData.appendChild(summary);
+
+      const editButton = document.createElement('button');
+      editButton.innerText = 'Edit';
+      this.detailsUserData.appendChild(editButton);
+
+      this.userDataInputDomElement = document.createElement('div');
+      this.detailsUserData.appendChild(this.userDataInputDomElement);
+
+      editButton.onclick = () => {
+        this.dispatchEvent(
+          new CustomEvent(GameObject3DInput.EVENT.OBJECT_INPUT_CREATION, {
+            detail: {
+              ClassObjectInput: CurrentClassObjectInput,
+              typeObjectInput: ObjectInput.TYPE.USER_DATA,
+            },
+          })
+        );
+      };
+    } else {
+      this.detailsUserData.hidden = true;
+    }
+  }
+
+  /**
+   * Update GameScript component edition of the current game object 3d
+   */
+  updateGameScript() {
+    this.updateScriptComponent(GameScriptComponent.TYPE);
+  }
+
+  /**
+   * Update ExternalScript component edition of the current game object 3d
+   */
+  updateExternalScript() {
+    this.updateScriptComponent(ExternalScriptComponent.TYPE);
+  }
+
+  /**
+   * Update Script component edition of the current game object 3d
+   *
+   * @param {string} scriptComponentType - can ExternalScriptComponent.TYPE or GameScriptComponent.TYPE
+   */
+  updateScriptComponent(scriptComponentType) {
+    const scriptComponent = this.gameObject3D.getComponent(scriptComponentType);
+    const detailsParent =
+      scriptComponentType == GameScriptComponent.TYPE
+        ? this.detailsGameScript
+        : this.detailsExternalScript;
+    const summaryText =
+      scriptComponentType == GameScriptComponent.TYPE
+        ? 'GameScript'
+        : 'ExternalScript';
+    const idScripts =
+      scriptComponentType == GameScriptComponent.TYPE
+        ? this.idGameScripts
+        : this.idExternalScripts;
+    const objectInputs =
+      scriptComponentType == GameScriptComponent.TYPE
+        ? this.gameScriptVariablesInputs
+        : this.externalScriptVariablesInputs;
+
+    while (detailsParent.firstChild) detailsParent.firstChild.remove();
+    // rebuild domelement
+    const summaryAudio = document.createElement('summary');
+    summaryAudio.innerText = summaryText;
+    detailsParent.appendChild(summaryAudio);
+
+    if (scriptComponent) {
+      // delete component button
+      const deleteComponentButton = document.createElement('button');
+      deleteComponentButton.innerText = 'Delete component';
+      detailsParent.appendChild(deleteComponentButton);
+
+      deleteComponentButton.onclick = () => {
+        this.dispatchEvent(
+          new CustomEvent(GameObject3DInput.EVENT.COMPONENT_REMOVE, {
+            detail: { type: scriptComponentType },
+          })
+        );
+      };
+
+      const listScript = document.createElement('ul');
+      detailsParent.appendChild(listScript);
+
+      const divObjectInput = document.createElement('div');
+      detailsParent.appendChild(divObjectInput);
+
+      if (scriptComponentType == GameScriptComponent.TYPE) {
+        this.gameScriptInputDomElement = divObjectInput;
+      } else if (scriptComponentType == ExternalScriptComponent.TYPE) {
+        this.externalScriptInputDomElement = divObjectInput;
+      }
+
+      const updateList = () => {
+        while (listScript.firstChild) listScript.firstChild.remove();
+
+        scriptComponent.model.scriptParams.forEach((param, index) => {
+          const li = document.createElement('li');
+          li.innerText = param.id;
+          listScript.appendChild(li);
+
+          for (let index = 0; index &lt; objectInputs.length; index++) {
+            const ClassObjectInput = objectInputs[index];
+            // scriptvariablesinput take an id in their condition
+            if (ClassObjectInput.condition(param.id)) {
+              const editButton = document.createElement('button');
+              editButton.innerText = 'Edit';
+              li.appendChild(editButton);
+              editButton.onclick = () => {
+                this.dispatchEvent(
+                  new CustomEvent(
+                    GameObject3DInput.EVENT.OBJECT_INPUT_CREATION,
+                    {
+                      detail: {
+                        ClassObjectInput: ClassObjectInput,
+                        typeObjectInput:
+                          scriptComponentType == GameScriptComponent.TYPE
+                            ? ObjectInput.TYPE.GAME_SCRIPT
+                            : ObjectInput.TYPE.EXTERNAL_SCRIPT,
+                      },
+                    }
+                  )
+                );
+              };
+
+              break;
+            }
+          }
+
+          const deleteButton = document.createElement('button');
+          deleteButton.innerText = 'delete';
+          li.appendChild(deleteButton);
+
+          deleteButton.onclick = () => {
+            scriptComponent.model.scriptParams.splice(index, 1);
+            this.dispatchEvent(
+              new CustomEvent(GameObject3DInput.EVENT.SCRIPT_DELETED, {
+                detail: { id: param.id },
+              })
+            );
+            updateList();
+          };
+
+          const priority = createLabelInput('Priorité: ', 'number');
+          li.appendChild(priority.parent);
+          priority.input.value = !isNaN(param.priority) ? param.priority : 0;
+          priority.input.onchange = () => {
+            const newPriority = Math.round(priority.input.value);
+            if (isNaN(newPriority)) return;
+            priority.input.value = newPriority; // the rounded one
+            param.priority = newPriority;
+          };
+        });
+      };
+      updateList();
+
+      // scripts that can be added
+      const selectIdScript = document.createElement('select');
+      detailsParent.appendChild(selectIdScript);
+
+      idScripts.forEach((id) => {
+        const option = document.createElement('option');
+        option.innerText = id;
+        option.value = id;
+        selectIdScript.appendChild(option);
+      });
+
+      const addScriptButton = document.createElement('button');
+      addScriptButton.innerText = 'Add ' + summaryText;
+      detailsParent.appendChild(addScriptButton);
+
+      addScriptButton.onclick = () => {
+        const idToAdd = selectIdScript.selectedOptions[0].value;
+        const alreadyThere =
+          scriptComponent.model.scriptParams.filter(
+            (param) => param.id == idToAdd
+          ).length != 0;
+        if (!alreadyThere) {
+          scriptComponent.model.scriptParams.push({ id: idToAdd, priority: 0 });
+          updateList();
+        }
+      };
+    } else {
+      const addComponentButton = document.createElement('button');
+      addComponentButton.innerText = 'Add component';
+      detailsParent.appendChild(addComponentButton);
+      addComponentButton.onclick = () => {
+        this.dispatchEvent(
+          new CustomEvent(GameObject3DInput.EVENT.COMPONENT_ADD, {
+            detail: { type: scriptComponentType },
+          })
+        );
+      };
+    }
+  }
+
+  /**
+   * Update Audio component edition of the current game object 3d
+   */
+  updateAudio() {
+    const audioComp = this.gameObject3D.getComponent(AudioComponent.TYPE);
+    while (this.detailsAudio.firstChild) this.detailsAudio.firstChild.remove();
+
+    // rebuild domelement
+    const summaryAudio = document.createElement('summary');
+    summaryAudio.innerText = 'Audio';
+    this.detailsAudio.appendChild(summaryAudio);
+    if (audioComp) {
+      // delete component button
+      const deleteComponentButton = document.createElement('button');
+      deleteComponentButton.innerText = 'Delete component';
+      this.detailsAudio.appendChild(deleteComponentButton);
+
+      deleteComponentButton.onclick = () => {
+        this.dispatchEvent(
+          new CustomEvent(GameObject3DInput.EVENT.COMPONENT_REMOVE, {
+            detail: { type: AudioComponent.TYPE },
+          })
+        );
+      };
+
+      // sounds
+      const listIdSounds = document.createElement('ul');
+      this.detailsAudio.appendChild(listIdSounds);
+
+      const updateList = () => {
+        while (listIdSounds.firstChild) listIdSounds.firstChild.remove();
+
+        audioComp.model.soundsJSON.forEach((idSound) => {
+          const li = document.createElement('li');
+          li.innerText = idSound;
+          listIdSounds.appendChild(li);
+
+          const deleteButton = document.createElement('button');
+          deleteButton.innerText = 'delete';
+          li.appendChild(deleteButton);
+
+          deleteButton.onclick = () => {
+            removeFromArray(audioComp.model.soundsJSON, idSound);
+            updateList();
+          };
+        });
+      };
+      updateList();
+
+      // sounds
+      const selectIdSound = document.createElement('select');
+      this.detailsAudio.appendChild(selectIdSound);
+      this.idSounds.forEach((idSound) => {
+        const option = document.createElement('option');
+        option.value = idSound;
+        option.innerText = idSound;
+        selectIdSound.appendChild(option);
+      });
+
+      const addIdSound = document.createElement('button');
+      this.detailsAudio.appendChild(addIdSound);
+      addIdSound.innerText = 'Add sound';
+      addIdSound.onclick = () => {
+        if (
+          arrayPushOnce(
+            audioComp.model.soundsJSON,
+            selectIdSound.selectedOptions[0].value
+          )
+        ) {
+          // has been added
+          updateList();
+        }
+      };
+
+      // conf audio
+
+      // loop
+      const loop = createLabelInput('Loop: ', 'checkbox');
+      this.detailsAudio.appendChild(loop.parent);
+      loop.input.checked = audioComp.model.conf.loop;
+      loop.input.onchange = () => {
+        audioComp.model.conf.loop = loop.input.checked;
+      };
+
+      // autoplay
+      const autoplay = createLabelInput('Autoplay: ', 'checkbox');
+      this.detailsAudio.appendChild(autoplay.parent);
+      autoplay.input.checked = audioComp.model.conf.autoplay;
+      autoplay.input.onchange = () => {
+        audioComp.model.conf.autoplay = autoplay.input.checked;
+      };
+
+      // spatialized
+      const spatialized = createLabelInput('Spatialized: ', 'checkbox');
+      this.detailsAudio.appendChild(spatialized.parent);
+      spatialized.input.checked = audioComp.model.conf.spatialized;
+      spatialized.input.onchange = () => {
+        audioComp.model.conf.spatialized = spatialized.input.checked;
+      };
+
+      // volume
+      const volume = createLabelInput('Volume: ', 'range');
+      this.detailsAudio.appendChild(volume.parent);
+      volume.input.min = 0;
+      volume.input.max = 1;
+      volume.input.step = 'any';
+      volume.input.value = isNaN(audioComp.model.conf.volume)
+        ? 1
+        : audioComp.model.conf.volume;
+      volume.input.onchange = () => {
+        audioComp.model.conf.volume = volume.input.valueAsNumber;
+      };
+    } else {
+      const addComponentButton = document.createElement('button');
+      addComponentButton.innerText = 'Add component';
+      this.detailsAudio.appendChild(addComponentButton);
+      addComponentButton.onclick = () => {
+        this.dispatchEvent(
+          new CustomEvent(GameObject3DInput.EVENT.COMPONENT_ADD, {
+            detail: { type: AudioComponent.TYPE },
+          })
+        );
+      };
+    }
+  }
+
+  /**
+   * Update Render component edition of the current game object 3d
+   */
+  updateRender() {
+    const renderComp = this.gameObject3D.getComponent(RenderComponent.TYPE);
+    while (this.detailsRender.firstChild)
+      this.detailsRender.firstChild.remove();
+
+    // rebuild domelement
+    const summaryRender = document.createElement('summary');
+    summaryRender.innerText = 'Render';
+    this.detailsRender.appendChild(summaryRender);
+    if (renderComp) {
+      // delete component button
+      const deleteComponentButton = document.createElement('button');
+      deleteComponentButton.innerText = 'Delete component';
+      this.detailsRender.appendChild(deleteComponentButton);
+
+      deleteComponentButton.onclick = () => {
+        this.dispatchEvent(
+          new CustomEvent(GameObject3DInput.EVENT.COMPONENT_REMOVE, {
+            detail: { type: RenderComponent.TYPE },
+          })
+        );
+      };
+
+      // color
+      const color = createLabelInput('Couleur: ', 'color');
+      this.detailsRender.appendChild(color.parent);
+      color.input.value =
+        '#' + new Color().fromArray(renderComp.model.color).getHexString();
+
+      // opacity
+      const opacity = createLabelInput('Opacité ', 'range');
+      opacity.input.min = 0;
+      opacity.input.max = 1;
+      opacity.input.step = 'any';
+      this.detailsRender.appendChild(opacity.parent);
+      opacity.input.value = renderComp.model.color[3];
+
+      const updateColor = () => {
+        renderComp.controller.setColor([
+          ...new Color(color.input.value).toArray(),
+          opacity.input.valueAsNumber,
+        ]);
+      };
+
+      opacity.input.onchange = updateColor;
+
+      color.input.onchange = updateColor;
+
+      // id model
+      const selectIdRenderData = document.createElement('select');
+      this.detailsRender.appendChild(selectIdRenderData);
+      this.idRenderDatas.forEach((id) => {
+        const option = document.createElement('option');
+        option.innerText = id || 'none';
+        option.value = id;
+        selectIdRenderData.appendChild(option);
+        if (renderComp.model.idRenderData == id) {
+          selectIdRenderData.value = id;
+        }
+      });
+
+      selectIdRenderData.onchange = () => {
+        renderComp.controller.setIdRenderData(
+          selectIdRenderData.selectedOptions[0].value
+        );
+        this.dispatchEvent(
+          new CustomEvent(GameObject3DInput.EVENT.ID_RENDER_DATA_CHANGED)
+        );
+      };
+    } else {
+      const addComponentButton = document.createElement('button');
+      addComponentButton.innerText = 'Add component';
+      this.detailsRender.appendChild(addComponentButton);
+      addComponentButton.onclick = () => {
+        this.dispatchEvent(
+          new CustomEvent(GameObject3DInput.EVENT.COMPONENT_ADD, {
+            detail: { type: RenderComponent.TYPE },
+          })
+        );
+      };
+    }
+  }
+
+  /**
+   * Update Collider component edition of the current game object 3d
+   */
+  updateCollider() {
+    const colliderComp = this.gameObject3D.getComponent(ColliderComponent.TYPE);
+    while (this.detailsCollider.firstChild)
+      this.detailsCollider.firstChild.remove();
+
+    // rebuild domelement
+    const summaryCollider = document.createElement('summary');
+    summaryCollider.innerText = 'Collider';
+    this.detailsCollider.appendChild(summaryCollider);
+    if (colliderComp) {
+      // delete component button
+      const deleteComponentButton = document.createElement('button');
+      deleteComponentButton.innerText = 'Delete component';
+      this.detailsCollider.appendChild(deleteComponentButton);
+
+      deleteComponentButton.onclick = () => {
+        this.dispatchEvent(
+          new CustomEvent(GameObject3DInput.EVENT.COMPONENT_REMOVE, {
+            detail: { type: ColliderComponent.TYPE },
+          })
+        );
+      };
+
+      // edit body attr
+      const bodyCheckbox = createLabelInput('body', 'checkbox');
+      bodyCheckbox.input.checked = colliderComp.model.body;
+      bodyCheckbox.input.onchange = () =>
+        (colliderComp.model.body = bodyCheckbox.input.checked);
+      this.detailsCollider.appendChild(bodyCheckbox.parent);
+
+      // add a polygon
+      const addPolygonButton = document.createElement('button');
+      addPolygonButton.innerText = 'Add Polygon';
+      this.detailsCollider.appendChild(addPolygonButton);
+
+      addPolygonButton.onclick = () => {
+        // add a square
+        colliderComp.model.shapesJSON.push({
+          type: ColliderComponent.SHAPE_TYPE.POLYGON,
+          points: [
+            { x: -5, y: -5, z: 0 },
+            { x: 5, y: -5, z: 0 },
+            { x: 5, y: 5, z: 0 },
+            { x: -5, y: 5, z: 0 },
+          ],
+        });
+        this.dispatchEvent(
+          new CustomEvent(GameObject3DInput.EVENT.SHAPE_ADDED, {
+            detail: {
+              shapeIndexCreated: colliderComp.model.shapesJSON.length - 1,
+            },
+          })
+        );
+      };
+
+      // add a circle
+      const addCircleButton = document.createElement('button');
+      addCircleButton.innerText = 'Add Circle';
+      this.detailsCollider.appendChild(addCircleButton);
+
+      addCircleButton.onclick = () => {
+        // add a circle
+        colliderComp.model.shapesJSON.push({
+          type: ColliderComponent.SHAPE_TYPE.CIRCLE,
+          radius: 2.5,
+          center: { x: 0, y: 0, z: 0 },
+        });
+        this.dispatchEvent(
+          new CustomEvent(GameObject3DInput.EVENT.SHAPE_ADDED, {
+            detail: {
+              shapeIndexCreated: colliderComp.model.shapesJSON.length - 1,
+            },
+          })
+        );
+      };
+
+      const visualization2DImage = document.createElement('img');
+      this.detailsCollider.appendChild(visualization2DImage);
+
+      // visualize collision in 2d
+      const visualizeCollision2DButton = document.createElement('button');
+      visualizeCollision2DButton.innerText = 'Update visualize 2D collision';
+      this.detailsCollider.appendChild(visualizeCollision2DButton);
+      const drawVisualization2D = () => {
+        const scene = new Scene();
+        scene.add(new AmbientLight('white', 0.6));
+
+        // move gameobject to another scene
+        const oldParent = this.gameObject3D.parent;
+        this.gameObject3D.removeFromParent();
+
+        scene.add(this.gameObject3D);
+        this.gameObject3D.updateMatrixWorld();
+
+        // compute bb with collider points
+        const bb = new Box3();
+
+        const colliderComp = this.gameObject3D.getComponent(
+          ColliderComponent.TYPE
+        );
+        colliderComp.model.shapesJSON.forEach((shape) => {
+          if (shape.type == ColliderComponent.SHAPE_TYPE.POLYGON) {
+            shape.points.forEach((point) => {
+              bb.expandByPoint(
+                new Vector3(point.x, point.y, point.z).applyMatrix4(
+                  this.gameObject3D.matrixWorld
+                )
+              );
+            });
+          } else {
+            bb.expandByPoint(
+              new Vector3(
+                shape.center.x + shape.radius,
+                shape.center.y + shape.radius,
+                shape.center.z
+              )
+                .multiply(this.gameObject3D.scale)
+                .add(this.gameObject3D.position)
+            );
+            bb.expandByPoint(
+              new Vector3(
+                shape.center.x - shape.radius,
+                shape.center.y - shape.radius,
+                shape.center.z
+              )
+                .multiply(this.gameObject3D.scale)
+                .add(this.gameObject3D.position)
+            );
+          }
+        });
+
+        const maxDim = Math.max(bb.max.x - bb.min.x, bb.max.y - bb.min.y);
+        const halfSize = maxDim * 0.5;
+        const camera = new OrthographicCamera(
+          -halfSize,
+          halfSize,
+          halfSize,
+          -halfSize,
+          0.001,
+          10000
+        );
+        bb.getCenter(camera.position);
+        camera.position.z = 1000;
+        camera.updateProjectionMatrix();
+        const renderer = new WebGLRenderer({
+          canvas: document.createElement('canvas'),
+          antialias: true,
+          alpha: true,
+        });
+
+        const size = 512;
+
+        renderer.setSize(size, size);
+        renderer.setClearColor(0xffffff, 0);
+        renderer.render(scene, camera);
+
+        // compute offset to translate collisions after
+        const offset = bb
+          .getCenter(new Vector3())
+          .sub(this.gameObject3D.position);
+
+        this.gameObject3D.removeFromParent();
+        oldParent.add(this.gameObject3D);
+
+        // draw image
+        const image = new Image();
+        image.src = renderer.domElement.toDataURL();
+
+        image.onload = async () => {
+          // render collisions
+          const json = this.gameObject3D.toJSON();
+          delete json.children; // remove children (they should be removed also in rendering above ?)
+          delete json.components.GameScript; // remove GameScript only Collider is needed
+          const context = new Context({}, new GameObject3D(json));
+          await context.load();
+
+          const canvas2D = document.createElement('canvas');
+          canvas2D.width = renderer.domElement.width;
+          canvas2D.height = renderer.domElement.height;
+          const ctx = canvas2D.getContext('2d');
+
+          ctx.drawImage(image, 0, 0);
+
+          ctx.save();
+          ctx.translate(
+            (0.5 - offset.x / maxDim) * renderer.domElement.width,
+            (0.5 + offset.y / maxDim) * renderer.domElement.height
+          );
+          ctx.scale(
+            (this.gameObject3D.scale.x * renderer.domElement.width) / maxDim,
+            (this.gameObject3D.scale.y * -renderer.domElement.height) / maxDim
+          );
+          context.collisions.draw(ctx);
+          ctx.fillStyle = 'green';
+          ctx.fill();
+          ctx.restore();
+
+          visualization2DImage.src = canvas2D.toDataURL();
+        };
+      };
+      visualizeCollision2DButton.onclick = drawVisualization2D;
+      drawVisualization2D();
+    } else {
+      const addComponentButton = document.createElement('button');
+      addComponentButton.innerText = 'Add component';
+      this.detailsCollider.appendChild(addComponentButton);
+      addComponentButton.onclick = () => {
+        this.dispatchEvent(
+          new CustomEvent(GameObject3DInput.EVENT.COMPONENT_ADD, {
+            detail: { type: ColliderComponent.TYPE },
+          })
+        );
+      };
+    }
+  }
+
+  /**
+   * Update Transform component edition of the current game object 3d
+   */
+  updateTransform() {
+    this.position.x.input.value = this.gameObject3D.position.x;
+    this.position.y.input.value = this.gameObject3D.position.y;
+    this.position.z.input.value = this.gameObject3D.position.z;
+    this.rotation.x.input.value = this.gameObject3D.rotation.x;
+    this.rotation.y.input.value = this.gameObject3D.rotation.y;
+    this.rotation.z.input.value = this.gameObject3D.rotation.z;
+    this.scale.x.input.value = this.gameObject3D.scale.x;
+    this.scale.y.input.value = this.gameObject3D.scale.y;
+    this.scale.z.input.value = this.gameObject3D.scale.z;
+  }
+
+  /**
+   *
+   * @returns {object} - EVENT enum of the game object 3d input
+   */
+  static get EVENT() {
+    return {
+      NAME_CHANGED: 'name_changed',
+      TRANSFORM_CHANGED: 'transform_changed',
+      SHAPE_ADDED: 'polygon_added',
+      OBJECT_INPUT_CREATION: 'object_input_creation',
+      SCRIPT_DELETED: 'script_deleted',
+      COMPONENT_ADD: 'component_add',
+      COMPONENT_REMOVE: 'component_remove',
+      ID_RENDER_DATA_CHANGED: 'id_render_data_changed',
+    };
+  }
+}
+window.customElements.define('game-object-3d-input', GameObject3DInput); // mandatory to extends HTMLElement
+</code></pre></article></section><footer class="footer" id="PeOAagUepe"><div class="wrapper">Fork: <a href="https://github.com/VCityTeam/UD-Viz">https://github.com/VCityTeam/UD-Viz</a></div></footer></div></div></div><div class="search-container" id="PkfLWpAbet" style="display:none"><div class="wrapper" id="iCxFxjkHbP"><button class="icon-button search-close-button" id="VjLlGakifb" aria-label="close search"><svg><use xlink:href="#close-icon"></use></svg></button><div class="search-box-c"><svg><use xlink:href="#search-icon"></use></svg> <input type="text" id="vpcKVYIppa" class="search-input" placeholder="Search..." autofocus></div><div class="search-result-c" id="fWwVHRuDuN"><span class="search-result-c-text">Type anything to view search result</span></div></div></div><div class="mobile-menu-icon-container"><button class="icon-button" id="mobile-menu" data-isopen="false" aria-label="menu"><svg><use xlink:href="#menu-icon"></use></svg></button></div><div id="mobile-sidebar" class="mobile-sidebar-container"><div class="mobile-sidebar-wrapper"><a href="/" class="sidebar-title sidebar-title-anchor">@ud-viz/game_editor</a><div class="mobile-nav-links"><div class="navbar-item"><a id="Github-mobile" href="https://github.com/VCityTeam/UD-Viz" target="_blank">Github</a></div><div class="navbar-item"><a id="Examples-mobile" href="https://ud-viz.vcityliris.data.alpha.grandlyon.com/" target="_blank">Examples</a></div><div class="navbar-item"><a id="udvizHome-mobile" href="../" target="">udviz</a></div><div class="navbar-item"><a id="udviz/extensions_3d_tiles_temporal-mobile" href="../extensions_3d_tiles_temporal" target="">udviz/extensions_3d_tiles_temporal</a></div><div class="navbar-item"><a id="udviz/frame3d-mobile" href="../frame3d" target="">udviz/frame3d</a></div><div class="navbar-item"><a id="udviz/game_browser-mobile" href="../game_browser" target="">udviz/game_browser</a></div><div class="navbar-item"><a id="udviz/game_browser_template-mobile" href="../game_browser_template" target="">udviz/game_browser_template</a></div><div class="navbar-item"><a id="udviz/game_editor-mobile" href="../game_editor" target="">udviz/game_editor</a></div><div class="navbar-item"><a id="udviz/game_node-mobile" href="../game_node" target="">udviz/game_node</a></div><div class="navbar-item"><a id="udviz/game_node_template-mobile" href="../game_node_template" target="">udviz/game_node_template</a></div><div class="navbar-item"><a id="udviz/game_shared-mobile" href="../game_shared" target="">udviz/game_shared</a></div><div class="navbar-item"><a id="udviz/game_shared_template-mobile" href="../game_shared_template" target="">udviz/game_shared_template</a></div><div class="navbar-item"><a id="udviz/show_room-mobile" href="../show_room" target="">udviz/show_room</a></div><div class="navbar-item"><a id="udviz/smdb-mobile" href="../smdb" target="">udviz/smdb</a></div><div class="navbar-item"><a id="udviz/utils_browser-mobile" href="../utils_browser" target="">udviz/utils_browser</a></div><div class="navbar-item"><a id="udviz/utils_node-mobile" href="../utils_node" target="">udviz/utils_node</a></div><div class="navbar-item"><a id="udviz/utils_shared-mobile" href="../utils_shared" target="">udviz/utils_shared</a></div><div class="navbar-item"><a id="udviz/visualizer-mobile" href="../visualizer" target="">udviz/visualizer</a></div><div class="navbar-item"><a id="udviz/widget_3d_tiles-mobile" href="../widget_3d_tiles" target="">udviz/widget_3d_tiles</a></div><div class="navbar-item"><a id="udviz/widget_base_map-mobile" href="../widget_base_map" target="">udviz/widget_base_map</a></div><div class="navbar-item"><a id="udviz/widget_bookmark-mobile" href="../widget_bookmark" target="">udviz/widget_bookmark</a></div><div class="navbar-item"><a id="udviz/widget_camera_positioner-mobile" href="../widget_camera_positioner" target="">udviz/widget_camera_positioner</a></div><div class="navbar-item"><a id="udviz/widget_extensions_3d_tiles_temporal-mobile" href="../widget_extensions_3d_tiles_temporal" target="">udviz/widget_extensions_3d_tiles_temporal</a></div><div class="navbar-item"><a id="udviz/widget_geocoding-mobile" href="../widget_geocoding" target="">udviz/widget_geocoding</a></div><div class="navbar-item"><a id="udviz/widget_guided_tour-mobile" href="../widget_guided_tour" target="">udviz/widget_guided_tour</a></div><div class="navbar-item"><a id="udviz/widget_layer_choice-mobile" href="../widget_layer_choice" target="">udviz/widget_layer_choice</a></div><div class="navbar-item"><a id="udviz/widget_legonizer-mobile" href="../widget_legonizer" target="">udviz/widget_legonizer</a></div><div class="navbar-item"><a id="udviz/widget_planar_controls-mobile" href="../widget_planar_controls" target="">udviz/widget_planar_controls</a></div><div class="navbar-item"><a id="udviz/widget_slide_show-mobile" href="../widget_slide_show" target="">udviz/widget_slide_show</a></div><div class="navbar-item"><a id="udviz/widget_sparql-mobile" href="../widget_sparql" target="">udviz/widget_sparql</a></div><div class="navbar-item"><a id="udviz/widget_versioning-mobile" href="../widget_versioning" target="">udviz/widget_versioning</a></div><div class="navbar-item"><a id="udviz/widget_workspace-mobile" href="../widget_workspace" target="">udviz/widget_workspace</a></div></div><div class="mobile-sidebar-items-c"><div class="sidebar-section-title with-arrow" data-isopen="false" id="sidebar-classes"><div>Classes</div><svg><use xlink:href="#down-icon"></use></svg></div><div class="sidebar-section-children-container"><div class="sidebar-section-children"><a href="DebugCollision.html">DebugCollision</a></div><div class="sidebar-section-children"><a href="Editor.html">Editor</a></div><div class="sidebar-section-children"><a href="GameObject3DInput.html">GameObject3DInput</a></div><div class="sidebar-section-children"><a href="ObjectInput.html">ObjectInput</a></div></div><div class="sidebar-section-title with-arrow" data-isopen="false" id="sidebar-tutorials"><div>Tutorials</div><svg><use xlink:href="#down-icon"></use></svg></div><div class="sidebar-section-children-container"><div class="sidebar-section-children"><a href="tutorial-Changelog.html">Changelog</a></div><div class="sidebar-section-children"><a href="tutorial-Contributing.html">Contributing</a></div><div class="sidebar-section-children"><a href="tutorial-Contributors.html">Contributors</a></div><div class="sidebar-section-children"><a href="tutorial-Definitions.html">Definitions</a></div><div class="sidebar-section-children"><a href="tutorial-Developers.html">Developers</a></div><div class="sidebar-section-children"><a href="tutorial-ReleasePublish.html">ReleasePublish</a></div><div class="sidebar-section-children"><a href="tutorial-Reproducibility.html">Reproducibility</a></div><div class="sidebar-section-children"><a href="tutorial-architecture.html">architecture</a></div><div class="sidebar-section-children"><a href="tutorial-game.html">game</a></div><div class="sidebar-section-children"><a href="tutorial-how_to_import.html">how_to_import</a></div><div class="sidebar-section-children"><a href="tutorial-initial_camera_transform.html">initial_camera_transform</a></div></div></div><div class="mobile-navbar-actions"><div class="navbar-right-item"><button class="icon-button search-button" aria-label="open-search"><svg><use xlink:href="#search-icon"></use></svg></button></div><div class="navbar-right-item"><button class="icon-button theme-toggle" aria-label="toggle-theme"><svg><use class="theme-svg-use" xlink:href="#light-theme-icon"></use></svg></button></div><div class="navbar-right-item"><button class="icon-button font-size" aria-label="change-font-size"><svg><use xlink:href="#font-size-icon"></use></svg></button></div></div></div></div><script type="text/javascript" src="scripts/core.min.js"></script><script src="scripts/search.min.js" defer="defer"></script><script src="scripts/third-party/fuse.js" defer="defer"></script><script type="text/javascript">var tocbotInstance=tocbot.init({tocSelector:"#eed4d2a0bfd64539bb9df78095dec881",contentSelector:".main-content",headingSelector:"h1, h2, h3",hasInnerContainers:!0,scrollContainer:".main-content",headingsOffset:130,onClick:bringLinkToView})</script></body></html>

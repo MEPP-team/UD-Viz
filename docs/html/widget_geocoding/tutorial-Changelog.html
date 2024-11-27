@@ -1,0 +1,276 @@
+<!DOCTYPE html><html lang="en" style="font-size:16px"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><link type="text/css" rel="stylesheet" href="custom.css"><title>Tutorial: Changelog</title><!--[if lt IE 9]>
+      <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]--><script src="scripts/third-party/hljs.js" defer="defer"></script><script src="scripts/third-party/hljs-line-num.js" defer="defer"></script><script src="scripts/third-party/popper.js" defer="defer"></script><script src="scripts/third-party/tippy.js" defer="defer"></script><script src="scripts/third-party/tocbot.min.js"></script><script>var baseURL="/",locationPathname="";baseURL=(locationPathname=document.location.pathname).substr(0,locationPathname.lastIndexOf("/")+1)</script><link rel="stylesheet" href="styles/clean-jsdoc-theme.min.css"><svg aria-hidden="true" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" style="display:none"><defs><symbol id="copy-icon" viewbox="0 0 488.3 488.3"><g><path d="M314.25,85.4h-227c-21.3,0-38.6,17.3-38.6,38.6v325.7c0,21.3,17.3,38.6,38.6,38.6h227c21.3,0,38.6-17.3,38.6-38.6V124    C352.75,102.7,335.45,85.4,314.25,85.4z M325.75,449.6c0,6.4-5.2,11.6-11.6,11.6h-227c-6.4,0-11.6-5.2-11.6-11.6V124    c0-6.4,5.2-11.6,11.6-11.6h227c6.4,0,11.6,5.2,11.6,11.6V449.6z"/><path d="M401.05,0h-227c-21.3,0-38.6,17.3-38.6,38.6c0,7.5,6,13.5,13.5,13.5s13.5-6,13.5-13.5c0-6.4,5.2-11.6,11.6-11.6h227    c6.4,0,11.6,5.2,11.6,11.6v325.7c0,6.4-5.2,11.6-11.6,11.6c-7.5,0-13.5,6-13.5,13.5s6,13.5,13.5,13.5c21.3,0,38.6-17.3,38.6-38.6    V38.6C439.65,17.3,422.35,0,401.05,0z"/></g></symbol><symbol id="search-icon" viewBox="0 0 512 512"><g><g><path d="M225.474,0C101.151,0,0,101.151,0,225.474c0,124.33,101.151,225.474,225.474,225.474    c124.33,0,225.474-101.144,225.474-225.474C450.948,101.151,349.804,0,225.474,0z M225.474,409.323    c-101.373,0-183.848-82.475-183.848-183.848S124.101,41.626,225.474,41.626s183.848,82.475,183.848,183.848    S326.847,409.323,225.474,409.323z"/></g></g><g><g><path d="M505.902,476.472L386.574,357.144c-8.131-8.131-21.299-8.131-29.43,0c-8.131,8.124-8.131,21.306,0,29.43l119.328,119.328    c4.065,4.065,9.387,6.098,14.715,6.098c5.321,0,10.649-2.033,14.715-6.098C514.033,497.778,514.033,484.596,505.902,476.472z"/></g></g></symbol><symbol id="font-size-icon" viewBox="0 0 24 24"><path fill="none" d="M0 0h24v24H0z"/><path d="M11.246 15H4.754l-2 5H.6L7 4h2l6.4 16h-2.154l-2-5zm-.8-2L8 6.885 5.554 13h4.892zM21 12.535V12h2v8h-2v-.535a4 4 0 1 1 0-6.93zM19 18a2 2 0 1 0 0-4 2 2 0 0 0 0 4z"/></symbol><symbol id="add-icon" viewBox="0 0 24 24"><path fill="none" d="M0 0h24v24H0z"/><path d="M11 11V5h2v6h6v2h-6v6h-2v-6H5v-2z"/></symbol><symbol id="minus-icon" viewBox="0 0 24 24"><path fill="none" d="M0 0h24v24H0z"/><path d="M5 11h14v2H5z"/></symbol><symbol id="dark-theme-icon" viewBox="0 0 24 24"><path fill="none" d="M0 0h24v24H0z"/><path d="M10 7a7 7 0 0 0 12 4.9v.1c0 5.523-4.477 10-10 10S2 17.523 2 12 6.477 2 12 2h.1A6.979 6.979 0 0 0 10 7zm-6 5a8 8 0 0 0 15.062 3.762A9 9 0 0 1 8.238 4.938 7.999 7.999 0 0 0 4 12z"/></symbol><symbol id="light-theme-icon" viewBox="0 0 24 24"><path fill="none" d="M0 0h24v24H0z"/><path d="M12 18a6 6 0 1 1 0-12 6 6 0 0 1 0 12zm0-2a4 4 0 1 0 0-8 4 4 0 0 0 0 8zM11 1h2v3h-2V1zm0 19h2v3h-2v-3zM3.515 4.929l1.414-1.414L7.05 5.636 5.636 7.05 3.515 4.93zM16.95 18.364l1.414-1.414 2.121 2.121-1.414 1.414-2.121-2.121zm2.121-14.85l1.414 1.415-2.121 2.121-1.414-1.414 2.121-2.121zM5.636 16.95l1.414 1.414-2.121 2.121-1.414-1.414 2.121-2.121zM23 11v2h-3v-2h3zM4 11v2H1v-2h3z"/></symbol><symbol id="reset-icon" viewBox="0 0 24 24"><path fill="none" d="M0 0h24v24H0z"/><path d="M18.537 19.567A9.961 9.961 0 0 1 12 22C6.477 22 2 17.523 2 12S6.477 2 12 2s10 4.477 10 10c0 2.136-.67 4.116-1.81 5.74L17 12h3a8 8 0 1 0-2.46 5.772l.997 1.795z"/></symbol><symbol id="down-icon" viewBox="0 0 16 16"><path fill-rule="evenodd" clip-rule="evenodd" d="M12.7803 6.21967C13.0732 6.51256 13.0732 6.98744 12.7803 7.28033L8.53033 11.5303C8.23744 11.8232 7.76256 11.8232 7.46967 11.5303L3.21967 7.28033C2.92678 6.98744 2.92678 6.51256 3.21967 6.21967C3.51256 5.92678 3.98744 5.92678 4.28033 6.21967L8 9.93934L11.7197 6.21967C12.0126 5.92678 12.4874 5.92678 12.7803 6.21967Z"></path></symbol><symbol id="codepen-icon" viewBox="0 0 24 24"><path fill="none" d="M0 0h24v24H0z"/><path d="M16.5 13.202L13 15.535v3.596L19.197 15 16.5 13.202zM14.697 12L12 10.202 9.303 12 12 13.798 14.697 12zM20 10.869L18.303 12 20 13.131V10.87zM19.197 9L13 4.869v3.596l3.5 2.333L19.197 9zM7.5 10.798L11 8.465V4.869L4.803 9 7.5 10.798zM4.803 15L11 19.131v-3.596l-3.5-2.333L4.803 15zM4 13.131L5.697 12 4 10.869v2.262zM2 9a1 1 0 0 1 .445-.832l9-6a1 1 0 0 1 1.11 0l9 6A1 1 0 0 1 22 9v6a1 1 0 0 1-.445.832l-9 6a1 1 0 0 1-1.11 0l-9-6A1 1 0 0 1 2 15V9z"/></symbol><symbol id="close-icon" viewBox="0 0 24 24"><path fill="none" d="M0 0h24v24H0z"/><path d="M12 10.586l4.95-4.95 1.414 1.414-4.95 4.95 4.95 4.95-1.414 1.414-4.95-4.95-4.95 4.95-1.414-1.414 4.95-4.95-4.95-4.95L7.05 5.636z"/></symbol><symbol id="menu-icon" viewBox="0 0 24 24"><path fill="none" d="M0 0h24v24H0z"/><path d="M3 4h18v2H3V4zm0 7h18v2H3v-2zm0 7h18v2H3v-2z"/></symbol></defs></svg></head><body data-theme="dark"><div class="sidebar-container"><div class="sidebar" id="sidebar"><a href="/" class="sidebar-title sidebar-title-anchor">@ud-viz/widget_geocoding</a><div class="sidebar-items-container"><div class="sidebar-section-title with-arrow" data-isopen="false" id="sidebar-classes"><div>Classes</div><svg><use xlink:href="#down-icon"></use></svg></div><div class="sidebar-section-children-container"><div class="sidebar-section-children"><a href="GeocodingService_GeocodingService.html">GeocodingService</a></div><div class="sidebar-section-children"><a href="GeocodingView_GeocodingView.html">GeocodingView</a></div></div><div class="sidebar-section-title with-arrow" data-isopen="false" id="sidebar-tutorials"><div>Tutorials</div><svg><use xlink:href="#down-icon"></use></svg></div><div class="sidebar-section-children-container"><div class="sidebar-section-children"><a href="tutorial-Changelog.html">Changelog</a></div><div class="sidebar-section-children"><a href="tutorial-Contributing.html">Contributing</a></div><div class="sidebar-section-children"><a href="tutorial-Contributors.html">Contributors</a></div><div class="sidebar-section-children"><a href="tutorial-Definitions.html">Definitions</a></div><div class="sidebar-section-children"><a href="tutorial-Developers.html">Developers</a></div><div class="sidebar-section-children"><a href="tutorial-ReleasePublish.html">ReleasePublish</a></div><div class="sidebar-section-children"><a href="tutorial-Reproducibility.html">Reproducibility</a></div><div class="sidebar-section-children"><a href="tutorial-architecture.html">architecture</a></div><div class="sidebar-section-children"><a href="tutorial-game.html">game</a></div><div class="sidebar-section-children"><a href="tutorial-how_to_import.html">how_to_import</a></div><div class="sidebar-section-children"><a href="tutorial-initial_camera_transform.html">initial_camera_transform</a></div></div></div></div></div><div class="navbar-container" id="VuAckcnZhf"><nav class="navbar"><div class="navbar-left-items"><div class="navbar-item"><a id="Github" href="https://github.com/VCityTeam/UD-Viz" target="_blank">Github</a></div><div class="navbar-item"><a id="Examples" href="https://ud-viz.vcityliris.data.alpha.grandlyon.com/" target="_blank">Examples</a></div><div class="navbar-item"><a id="udvizHome" href="../" target="">udviz</a></div><div class="navbar-item"><a id="udviz/extensions_3d_tiles_temporal" href="../extensions_3d_tiles_temporal" target="">udviz/extensions_3d_tiles_temporal</a></div><div class="navbar-item"><a id="udviz/frame3d" href="../frame3d" target="">udviz/frame3d</a></div><div class="navbar-item"><a id="udviz/game_browser" href="../game_browser" target="">udviz/game_browser</a></div><div class="navbar-item"><a id="udviz/game_browser_template" href="../game_browser_template" target="">udviz/game_browser_template</a></div><div class="navbar-item"><a id="udviz/game_editor" href="../game_editor" target="">udviz/game_editor</a></div><div class="navbar-item"><a id="udviz/game_node" href="../game_node" target="">udviz/game_node</a></div><div class="navbar-item"><a id="udviz/game_node_template" href="../game_node_template" target="">udviz/game_node_template</a></div><div class="navbar-item"><a id="udviz/game_shared" href="../game_shared" target="">udviz/game_shared</a></div><div class="navbar-item"><a id="udviz/game_shared_template" href="../game_shared_template" target="">udviz/game_shared_template</a></div><div class="navbar-item"><a id="udviz/show_room" href="../show_room" target="">udviz/show_room</a></div><div class="navbar-item"><a id="udviz/smdb" href="../smdb" target="">udviz/smdb</a></div><div class="navbar-item"><a id="udviz/utils_browser" href="../utils_browser" target="">udviz/utils_browser</a></div><div class="navbar-item"><a id="udviz/utils_node" href="../utils_node" target="">udviz/utils_node</a></div><div class="navbar-item"><a id="udviz/utils_shared" href="../utils_shared" target="">udviz/utils_shared</a></div><div class="navbar-item"><a id="udviz/visualizer" href="../visualizer" target="">udviz/visualizer</a></div><div class="navbar-item"><a id="udviz/widget_3d_tiles" href="../widget_3d_tiles" target="">udviz/widget_3d_tiles</a></div><div class="navbar-item"><a id="udviz/widget_base_map" href="../widget_base_map" target="">udviz/widget_base_map</a></div><div class="navbar-item"><a id="udviz/widget_bookmark" href="../widget_bookmark" target="">udviz/widget_bookmark</a></div><div class="navbar-item"><a id="udviz/widget_camera_positioner" href="../widget_camera_positioner" target="">udviz/widget_camera_positioner</a></div><div class="navbar-item"><a id="udviz/widget_extensions_3d_tiles_temporal" href="../widget_extensions_3d_tiles_temporal" target="">udviz/widget_extensions_3d_tiles_temporal</a></div><div class="navbar-item"><a id="udviz/widget_geocoding" href="../widget_geocoding" target="">udviz/widget_geocoding</a></div><div class="navbar-item"><a id="udviz/widget_guided_tour" href="../widget_guided_tour" target="">udviz/widget_guided_tour</a></div><div class="navbar-item"><a id="udviz/widget_layer_choice" href="../widget_layer_choice" target="">udviz/widget_layer_choice</a></div><div class="navbar-item"><a id="udviz/widget_legonizer" href="../widget_legonizer" target="">udviz/widget_legonizer</a></div><div class="navbar-item"><a id="udviz/widget_planar_controls" href="../widget_planar_controls" target="">udviz/widget_planar_controls</a></div><div class="navbar-item"><a id="udviz/widget_slide_show" href="../widget_slide_show" target="">udviz/widget_slide_show</a></div><div class="navbar-item"><a id="udviz/widget_sparql" href="../widget_sparql" target="">udviz/widget_sparql</a></div><div class="navbar-item"><a id="udviz/widget_versioning" href="../widget_versioning" target="">udviz/widget_versioning</a></div><div class="navbar-item"><a id="udviz/widget_workspace" href="../widget_workspace" target="">udviz/widget_workspace</a></div></div><div class="navbar-right-items"><div class="navbar-right-item"><button class="icon-button search-button" aria-label="open-search"><svg><use xlink:href="#search-icon"></use></svg></button></div><div class="navbar-right-item"><button class="icon-button theme-toggle" aria-label="toggle-theme"><svg><use class="theme-svg-use" xlink:href="#light-theme-icon"></use></svg></button></div><div class="navbar-right-item"><button class="icon-button font-size" aria-label="change-font-size"><svg><use xlink:href="#font-size-icon"></use></svg></button></div></div><nav></nav></nav></div><div class="toc-container"><div class="toc-content"><span class="bold">On this page</span><div id="eed4d2a0bfd64539bb9df78095dec881"></div></div></div><div class="body-wrapper"><div class="main-content"><div class="main-wrapper"><section><header><h2>Changelog</h2></header><article><h1 id="v4.6.0">v4.6.0</h1><h2 id="%40ud-viz%2Fwidget_legonizer">@ud-viz/widget_legonizer</h2><ul><li>Improved voxel view with the addition of the correct number of lego plates (voxel highlighted in white).</li><li>Slight optimisation of voxel creation in the view.</li><li>Change the ratio parameter to scale to clarify this parameter.</li><li>Maximum lego height parameter added to the UI.</li><li>Removal of data selection by cityObject. Selecting an area to voxelise has become simpler.</li><li>Add listeners to the xLegoPlates and yLegoPlates parameters that update the selection zone</li></ul><h1 id="4.5.1">4.5.1</h1><h2 id="%40ud-viz">@ud-viz</h2><ul><li>Examples: (itowns_3d_tiles_pointcoud) replace source['url'] by source</li></ul><h2 id="%40ud-viz%2Fvisualizer">@ud-viz/visualizer</h2><ul><li>New package which is a refacto of point_cloud_visualizer</li><li>Updates:<ul><li><code>@ud-viz/point_cloud_visualizer</code> become <code>@ud-viz/visualizer</code></li><li>Update Readme</li><li>Refacto -&gt; split packages in few files by features</li></ul></li></ul><h1 id="4.5.0">4.5.0</h1><h2 id="%40ud-viz-1">@ud-viz</h2><ul><li>Add a new demo (versioning widget) to demo mosaic</li></ul><h2 id="%40ud-viz%2Fwidget_versioning">@ud-viz/widget_versioning</h2><ul><li>Created widget_versioning</li></ul><h2 id="%40ud-viz%2Fwidget_sparql">@ud-viz/widget_sparql</h2><ul><li>Improved customisation of the SPARQL endpoint response provider</li></ul><h1 id="4.4.0">4.4.0</h1><h2 id="%40ud-viz-2">@ud-viz</h2><ul><li>Add a new demo (industrial morphology) to demo mosaic</li><li>Fix CI badges</li><li>Add a <code>name</code> field in layers config files</li><li>Bump webpack from 5.88.2 to 5.94.0</li></ul><h2 id="%40ud-vie%2Fextensions_3d_tiles_temporal">@ud-vie/extensions_3d_tiles_temporal</h2><ul><li>Fix STParabola to insure curve points indexes are never out of bounds</li></ul><h2 id="%40ud-viz%2Fwidget_guided_tour">@ud-viz/widget_guided_tour</h2><ul><li>Allow steps with no layer to hide</li></ul><h2 id="%40ud-viz%2Fwidget_sparql-1">@ud-viz/widget_sparql</h2><ul><li>Add dropdown menu for nodes functions</li><li>Add queries for retrieving nodes descendants</li><li>Add clusterisation by neighbors</li><li>Add clusterisation by type</li></ul><h1 id="4.3.0">4.3.0</h1><h2 id="%40ud-viz-3">@ud-viz</h2><ul><li>Doc: Add Readme mardown files for all packages.</li></ul><h2 id="%40ud-viz%2Futils_browser">@ud-viz/utils_browser</h2><ul><li>New function <code>createSpriteFromString</code></li></ul><h2 id="%40ud-viz%2Fextensions_3d_tiles_temporal">@ud-viz/extensions_3d_tiles_temporal</h2><ul><li>New method to visualise the evolution of the city. We integrate all the versions simultaneously in the city to allow a better understanding of the evolution.</li><li>We implement our method through 4 timelines shapes: Vector, Helix, Circle, Parabola</li><li>In addition, we implement two ways to position the versions accross the timeline:Sequential, Chronological.</li><li>UI to select display mode in example</li></ul><h1 id="4.2.0">4.2.0</h1><h2 id="%40ud-viz%2Fwidget_3d_tiles">@ud-viz/widget_3d_tiles</h2><ul><li>The integrated layer manager that was previously mandatory is now optional. This allows the simultaneous usage of @ud-viz/widget_3d_tiles and @ud-viz/wwidget_layer_choice without the UI redundancy/repetition of existing layers listings.</li></ul><h2 id="%40ud-viz%2Fwidget_layer_choice">@ud-viz/widget_layer_choice</h2><ul><li>Each layer description now has a remove button</li><li>overflow of ui</li></ul><h2 id="%40ud-viz%2Fshowroom">@ud-viz/showroom</h2><ul><li>css for the about and help buttons is now provided</li><li>extralines now deleted</li><li>html element now have added tiltes</li><li>about and help button now removed from the sidebar. Instead tiny buttons are created at the bottom left of the screen</li><li>the added code tiny button redirects to .html code</li></ul><h2 id="ci">ci</h2><ul><li>Fix of the always failing labels config test (failure came from a change in the WFS API as provided by IGN). The fix consists in skipping the triggered errors within the functional test when the request or the response are not related to localhost.</li></ul><h1 id="4.1.0">4.1.0</h1><h2 id="%40ud-viz-4">@ud-viz</h2><pre><code>- Created Documentation Github Action
+- Generated documentation with Github Actions
+- Improved the documentation
+</code></pre><h2 id="%40ud-viz%2Flegonizer">@ud-viz/legonizer</h2><pre><code>- Created the package and its widget
+</code></pre><h2 id="%40ud-viz%2Fgame_shared">@ud-viz/game_shared</h2><pre><code>- update(NativeCommandManager.js): checkMaxAltitude and checkMinAltitude now use worldposition of object3D
+- update(ControllerNativeCommandManager.js):stop using mode.type in controls function
+- update(NativeCommandManager):add max and min altitude when move and move down
+- update(ControllerNativeCommandManager):add new mode with up and down
+</code></pre><h2 id="%40ud-viz%2Fwidget_layer_choice-1">@ud-viz/widget_layer_choice</h2><pre><code>- feat(LayerChoice):Add focus button in layerchoice widget
+</code></pre><h1 id="v4.0.3">v4.0.3</h1><h2 id="%40ud-viz-5">@ud-viz</h2><pre><code>- autoMermaid.js generate architecture.md for each packages
+- reload is call on the backend side only when NODE_ENV=development
+- Readme.md updated
+- fix(examples): change htmlElement to set onclick function
+- create(examples): game_editor
+- remove bundle while npm run local-ci to force the build
+- doc(examples) game_editor example doc + addMarkdown.js to add in a generic way .md
+</code></pre><h2 id="%40ud-viz%2Fgame_browser_template">@ud-viz/game_browser_template</h2><pre><code>- Readme.md updated
+- remove addNativeCommands/removeNativeCommands
+- ControllerNativeCommandManager script
+</code></pre><h2 id="%40ud-viz%2Fgame_shared-1">@ud-viz/game_shared</h2><pre><code>- Readme.md updated
+- opti(game_shared) avoid new operation in Collider
+- feat(game) ScriptBase overwrite with DEFAULT_VARIABLES
+- fix(Collider) rotation + right order points + small coord referential
+- fix(@ud-viz/game_shared) removal in state add
+</code></pre><h2 id="%40ud-viz%2Fgame_shared_template">@ud-viz/game_shared_template</h2><pre><code>- Readme.md updated
+- NativeCommandManager consider withMap option
+</code></pre><h2 id="%40ud-viz%2Fgame_browser">@ud-viz/game_browser</h2><pre><code>- Readme.md updated
+- Context do not modify state received
+- feat(game) ScriptBase overwrite with DEFAULT_VARIABLES
+</code></pre><h2 id="%40ud-viz%2Futils_shared">@ud-viz/utils_shared</h2><pre><code>- polygon2DArea
+</code></pre><h2 id="%40ud-viz%2Futils_node">@ud-viz/utils_node</h2><pre><code>- fix(automermaid):remove double import
+- fix(automermaid):use process.cwd() better id
+</code></pre><h2 id="%40ud-viz%2Fextensions_3d_tiles_temporal-1">@ud-viz/extensions_3d_tiles_temporal</h2><pre><code>- Readme.md updated
+</code></pre><h2 id="%40ud-viz%2Fframe3d">@ud-viz/frame3d</h2><pre><code>- Readme.md updated
+- feat(frame3d) renderCss while render 3d
+</code></pre><h2 id="%40ud-viz%2Fgame_node">@ud-viz/game_node</h2><pre><code>- Readme.md updated
+</code></pre><h2 id="%40ud-viz%2Fgame_node_template">@ud-viz/game_node_template</h2><pre><code>- Readme.md updated
+</code></pre><h2 id="%40ud-viz%2Fpoint_cloud_visualizer">@ud-viz/point_cloud_visualizer</h2><pre><code>- clipping plane instead of near and far camera
+</code></pre><h2 id="%40ud-viz%2Fgame_editor">@ud-viz/game_editor</h2><pre><code>- double side on shape meshes
+- &quot;f&quot; focus selected game object 3d
+- feat(game_editor) point shape have a constant size on screen
+- feat(game_editor) add/remove component
+- feat(game_editor) game object 3d can be move in hierarchy
+- feat(game_editor) DebugCollision
+- feat(@ud-viz/game_editor) userdata can be edited
+- script input =&gt; object input
+</code></pre><h2 id="%40ud-viz%2Futils_browser-1">@ud-viz/utils_browser</h2><pre><code>- feat(RequestAnimationFrameProcess) multi requester
+</code></pre><h1 id="v4.0.2">v4.0.2</h1><h2 id="%40ud-viz-6">@ud-viz</h2><ul><li>npm cmd webpack-bundle-analyzer</li><li>script setPackageVersion.js</li><li>update to itowns 2.41.1-next.9</li></ul><h2 id="%40ud-viz%2Fgame_shared-2">@ud-viz/game_shared</h2><pre><code>- compute bandwidth
+- idScritp:string =&gt; scriptParam:{id:string, priority:number}
+- applyCommandCallback API
+- update(ColliderComp): add SHAPE_TYPE
+</code></pre><h2 id="%40ud-viz%2Fgame_browser_template-1">@ud-viz/game_browser_template</h2><pre><code>- optimization of the camera manager obstacle computation
+</code></pre><h2 id="%40ud-viz%2Futils_shared-1">@ud-viz/utils_shared</h2><pre><code>- computeFilename
+- throttle
+</code></pre><h2 id="%40ud-viz%2Fgame_editor-1">@ud-viz/game_editor</h2><pre><code>- creation of the package
+</code></pre><h1 id="v4.0.1">v4.0.1</h1><h2 id="%40ud-viz-7">@ud-viz</h2><pre><code>- Examples:
+  - point_cloud_visualizer.html
+  - game_dom_element_3d_cube.html
+  - widget_guided_tour.html
+  - assets/js/libs/maptastic.js
+  - maptastic.html
+  - use 2018 buildings
+- Remove useless innerHTML
+- Update ReleasePublish.md 
+</code></pre><h2 id="%40ud-viz%2Fpoint_cloud_visualizer-1">@ud-viz/point_cloud_visualizer</h2><pre><code>- Creation of the package
+</code></pre><h2 id="%40ud-viz%2Fwidget_layer_choice-2">@ud-viz/widget_layer_choice</h2><pre><code>- Complete refacto
+- Can order ColorLayer
+- LocalStorage ui element
+</code></pre><h2 id="%40ud-viz%2Futils_shared-2">@ud-viz/utils_shared</h2><pre><code>- round
+- vector3ToLabel
+- insert
+</code></pre><h2 id="%40ud-viz%2Futils_browser-2">@ud-viz/utils_browser</h2><pre><code>- createLocalStorageNumberInput
+- createLocalStorageSlider
+- createLocalStorageCheckbox
+- createLocalStorageDetails
+</code></pre><h2 id="%40ud-viz%2Futils_node-1">@ud-viz/utils_node</h2><pre><code>- fix(test):splice first '/' of req.url, statusCode
+</code></pre><h2 id="%40ud-viz%2Fgame_node_template-1">@ud-viz/game_node_template</h2><pre><code>- DomElement3DCubeManager script
+</code></pre><h2 id="%40ud-viz%2Fgame_browser_template-2">@ud-viz/game_browser_template</h2><pre><code>- DomElement3DCube script
+</code></pre><h2 id="%40ud-viz%2Fwidget_guided_tour-1">@ud-viz/widget_guided_tour</h2><pre><code>- Creation of the package
+</code></pre><h1 id="v4.0.0">v4.0.0</h1><h2 id="%40ud-viz-8">@ud-viz</h2><pre><code>- Refact(ud-viz)! split into multiples packages
+- Add loading screen in examples
+- Fix show room
+- Add avatar jitsi game example
+- Doc:
+    - fix doc
+    - update doc
+</code></pre><h1 id="v3.2.0">v3.2.0</h1><h2 id="%40ud-viz-9">@ud-viz</h2><pre><code>- Fix socket.io dependencies
+- Update with node18
+- Prettier harmonization
+- Improve `Readme.md`
+- Examples:
+  - Showroom download coordinate on right click
+  - Add workspace widget example
+- Doc:
+  - bin scripts documentation
+  - nvm doc
+  - fix comments prePublish script
+- CI:
+  - Add test of the `RequestAnimationFrame` 
+</code></pre><h2 id="%40ud-viz%2Fshared">@ud-viz/shared</h2><pre><code>- Remove `EventSender` class to use `THREE.EventDispatcher` instead 
+</code></pre><h2 id="%40ud-viz%2Fnode">@ud-viz/node</h2><h2 id="%40ud-viz%2Fbrowser">@ud-viz/browser</h2><pre><code>- Widgets view reference their dom element as attribute
+- C3DTiles widget display bounding box of the C3DTFeature selected
+- Add Workspace module
+- Refacto of the SPARQL module
+- Expose `RequestAnimationFrame` in API
+- Fix bug Frame3DPlanar render labels
+- THREEUtil encoding =&gt; colorSpace
+- Update itowns 2.40.0
+</code></pre><h1 id="v3.1.1">v3.1.1</h1><h2 id="%40ud-viz-10">@ud-viz</h2><pre><code>- NPM :
+    - Remove `^` in all package.json
+- Examples:
+    - 2D Visualisation Mode
+    - SidebarWidget renamed as Showroom and moved in Examples
+    - 3DTiles loading feedback
+    - Bookmark widget
+    - Change GrandLyon basemaps and elevation
+    - Remove unused 'color' attribute from 3DTiles config
+    - Projections are now defined in a config file
+    - New C3DTilesEditor example
+- Doc
+    - Camera
+    - Fix links
+    - Add Contributing.md
+    - Update Contributors.md
+    - Add Architecture.md
+    - Packages description
+    - Use Showdown package to add mermaid in online doc
+- CI
+    - Throw only the client errors
+    - Change Node version to 18 and npm version to 9
+</code></pre><h2 id="%40ud-viz%2Fshared-1">@ud-viz/shared</h2><ul><li>NativeCommandManager: possibility to customize speed</li><li>Context: add IS_SCRIPTBASE static in ScriptBase class</li></ul><h2 id="%40ud-viz%2Fnode-1">@ud-viz/node</h2><ul><li>JS Script to generate mermaid diagrams in markdown from JS projects</li></ul><h2 id="%40ud-viz%2Fbrowser-1">@ud-viz/browser</h2><ul><li>update to iTowns 2.39.1-next.25</li><li>Remove addLayer methods (now in examples)</li><li>Frame3D: change default maxSubdivisionLevel from 3 to 5</li><li>Frame3D: remove 'size&quot; attribute</li><li>Fix AudioController: spatialized sounds decompose feature</li><li>LocalStorage: vector3 tracking</li><li>Context: add IS_SCRIPTBASE static in ScriptBase class</li><li>Remove JQuery</li><li>Use domElement instead of rootHtml</li><li><code>URLUtil</code></li><li>Game: commands are applied at step</li><li>FileUtil is no longer exposed in the API</li></ul><h1 id="v3.1.0">v3.1.0</h1><h2 id="%40ud-viz%3A">@ud-viz:</h2><ul><li>Docs:<ul><li>Mermaid is interpreted on jsdoc generation</li><li>Simple game tutorial</li><li>Camera intialization tutorial</li><li>How to import bundle</li></ul></li><li>CI:<ul><li>validate docs generation</li><li>validate .md links (remark-cli + remark-validate-links)</li></ul></li><li>Examples:<ul><li><code>ShowRoom</code>: url can encoded camera pov + loading screen</li><li>3DTiles wireframe</li><li>3DTiles pointCloud</li><li>FitExtent</li><li>PlanarControls widget</li><li>3DTiles widget</li><li>MultiPlayer note game</li><li>3DTiles style</li><li>Authentication</li><li>Guided tour</li><li>Window</li></ul></li><li>Architecture:<ul><li>dev worflow improve with auto-reload (reload)</li><li>dynamic html (string-replace-middleware)</li><li>test folder created</li><li>examples are no more in @ud-viz/browser</li><li>docs folder is currently cleaned (still in progression)</li><li>some clean</li></ul></li></ul><h2 id="%40ud-viz%2Fshared-2">@ud-viz/shared</h2><ul><li>Add Game script template</li></ul><h2 id="%40ud-viz%2Fnode%3A">@ud-viz/node:</h2><ul><li>Add Game script template</li><li>Game <code>SocketService</code> (socket.io)</li></ul><h2 id="%40ud-viz%2Fbrowser%3A">@ud-viz/browser:</h2><ul><li>Widget <code>3DTiles</code></li><li>Widget <code>PlanarControls</code></li><li><code>LocalStorageUtil</code></li><li><code>InputManager</code> can be no insensitive</li><li>Add Game external script template</li><li>Game <code>MultiPlanarProcess</code> created (socket.io-client)</li><li>Bug fixes</li><li><code>SlideShow</code>:<ul><li>sound on video</li><li>bug fixes</li></ul></li><li><code>Window</code>:<ul><li>reduce button</li><li>removed from <code>AllWidget</code> and is no more used (no removed yet)</li></ul></li><li><code>AllWidget</code> =&gt; <code>ShowRoom</code> and is now an example</li><li>SPARQL Module new features</li><li>Update to itowns 2.39.1-next.18:</li><li>Remove Itowns folder :<ul><li><code>TilesManager</code></li><li><code>LayerManager</code></li><li><code>CityObject</code></li><li><code>CityObjectStyle</code></li><li><code>StyleManager</code></li><li><code>Tiles</code></li></ul></li><li>Remove <code>LinkDocument</code></li><li>Remove <code>3DTilesDebugWindow</code></li></ul><h1 id="v3.0.0">v3.0.0</h1><ul><li><p>JSDOC overhaul</p></li><li><p>UD-Viz repository becomes a 3-package <strong>mono-repo</strong> :</p><ul><li>Decompose the ud-viz package into 2 packages :<ul><li><a href="https://github.com/VCityTeam/UD-Viz/tree/master/packages/shared">@ud-viz/shared</a></li><li><a href="https://github.com/VCityTeam/UD-Viz/tree/master/packages/browser">@ud-viz/browser</a></li></ul></li><li>Add a new package<ul><li><a href="https://github.com/VCityTeam/UD-Viz/tree/master/packages/node">@ud-viz/node</a></li></ul></li><li>4 package.json: <strong>mono-repo</strong>, <strong>browser</strong>, <strong>shared</strong>, <strong>node</strong></li><li>All eslint's warnings are fixed</li></ul></li><li><p><strong>browser</strong>, <strong>shared</strong>: Add a set of tests for and scripts/features (html files in <strong>browser</strong> are tested with puppeteer)</p></li><li><p><strong>browser</strong>:</p><ul><li>Delete <code>View3D</code> and <code>GameView</code>. The notion of View is now assured by <code>Frame3DBase</code> and <code>Frame3DPlanar</code>.</li><li>Creation of <code>ExternalContext</code></li><li>All configs are now split by features</li><li>Widgets take as arguments their config and not allWidget config anymore</li><li>API breaking changes</li><li>Bug fixes for :<ul><li>video loading</li><li>load texture files</li></ul></li></ul></li><li><p><strong>shared</strong>:</p><ul><li>Delete <code>World</code>.</li><li>Refacto of <code>Context</code></li><li><code>GameObject</code> becomes <code>Object3D</code> and now extends <code>THREE.Object3D</code></li></ul></li><li><p><strong>node</strong>:</p><ul><li>Write an <code>ExpressAppWrapper</code></li></ul></li><li><p><strong>Documentation</strong>:</p><ul><li>5 Readmes : <strong>mono-repo</strong>, <strong>browser</strong>, <strong>shared</strong>, <strong>node</strong>, <strong>documentation</strong>.</li><li><code>Contributing.md</code></li><li><code>ReleasePublish.md</code> updated</li></ul></li></ul><h1 id="v2.39.3">v2.39.3</h1><pre><code>- Equal CityObjectID
+- Change ColorLayers sequence order in BaseMap widget
+- Decompose Pack method in Game Enfine
+- Fix: correctly set the layers invisible
+- Rename projection -&gt; crs BaseMapWindow
+- Use 'crs' instead of deprecated 'projection'
+- Support non texture format
+- Fix temporal camera
+- Change camera position to see 3DTiles
+- SlideShow enhancement loop
+- GameObject are not outdated when transform is modified
+- Updated-dependencies:
+    dependency-name: loader-utils
+    dependency-type: indirect
+</code></pre><h1 id="v2.39.2">v2.39.2</h1><pre><code>- Allwidget.css : hide widget_content by default
+- Some jsdoc
+- Fix billboard to css method
+- Remove zoomControl in params
+- HtmlUtils method checkchildparent
+- Unpack uri component check
+</code></pre><h1 id="v2.39.1">v2.39.1</h1><pre><code>- Remove zindex View3D css
+- LocalContext method findLocalScriptWithID + findGOWithLocalScriptID
+</code></pre><h1 id="v2.39.0">v2.39.0</h1><pre><code>- Update config file &amp; example html to work with new CSS
+- Change ExtendedDoc UI
+- Refacto About &amp; Help module
+- Add logo user
+- Better CSS
+    - Change font-family
+    - Change font color
+- Change Logo &amp; UI
+</code></pre><h1 id="v2.38.4">v2.38.4</h1><pre><code>- Refacto GameView update
+- Warn if wrong config in elevation_layer
+- Audio component refacto
+</code></pre><h1 id="v2.38.3">v2.38.3</h1><pre><code>- WorldState reference worldUUID
+- Pack uri to vector3 and euler
+- Several callback can be add on the same mouseCommand eventID
+- Remove background-color View3D
+</code></pre><h1 id="v2.38.2">v2.38.2</h1><ul><li>Some ui adjust</li><li>Add command :<ul><li>up/down</li><li>ping</li><li>speed change</li></ul></li></ul><h1 id="v2.38.1">v2.38.1</h1><ul><li>forceSerializeComponent on GameObject feature</li></ul><h1 id="v2.38.0">v2.38.0</h1><ul><li><a href="https://github.com/orgs/VCityTeam/projects/17/views/1">Issue 349</a>: GeoJSON data layer integration via JSON config file and created an example in the UD-Viz mosaïc</li><li><a href="https://github.com/orgs/VCityTeam/projects/17/views/1">Issue 234</a>: Refactoring of the UD-Viz library structure, factorization of the View3D which includes the view itowns as well as the data integration methods in it.</li><li><a href="https://github.com/orgs/VCityTeam/projects/17/views/1">Issue 249</a>: Check for collisions in this local context rather than in the world/server context.</li><li><a href="https://github.com/orgs/VCityTeam/projects/17/views/1">Issue 389</a>: Move 3DDebugTiles from extensions to widgets.</li><li><a href="https://github.com/orgs/VCityTeam/projects/17/views/1">Issue 284</a>: Assert DRYness between avatar example and demo-bon.</li><li><a href="https://github.com/orgs/VCityTeam/projects/17/views/1">Issue 231</a>: Load 3DTiles from distant server instead of local. The 3DTiles are now on a the Liris server.</li><li><a href="https://github.com/orgs/VCityTeam/projects/17/views/1">Issue 361</a>: CityObject and 3DTiles Debug widgets can apply style to invisible tiles.</li><li><a href="https://github.com/orgs/VCityTeam/projects/17/views/1">Issue 366</a>: Dynamic layer creation, 2 ways to create dynamic layers:<ul><li>A first way in which a stream of GeoJson created by GAMA is received.</li><li>Link to local GeoJson and change every second to give the dynamic effect.</li></ul></li><li><a href="https://github.com/orgs/VCityTeam/projects/17/views/1">Issue 188</a>: Propose in a module a pre_selection of background image layer, coming from IGN for example, and created an example in the UD-Viz mosaïc.</li></ul><h1 id="v2.37.7">v2.37.7</h1><pre><code>- Billboard fixes
+- Add onResize LocalScript event
+</code></pre><h1 id="v2.37.6">v2.37.6</h1><pre><code>- Update LocalGameTutorial.md
+- Fix no paths in sky with a sky color
+- New Command.TYPE teleport
+</code></pre><h1 id="v2.37.5">v2.37.5</h1><pre><code>- fix:
+    apply default style for tilesets without color
+    layer without color
+    selection of non visible object
+    filterWindow having no specific div
+    picking and display of picked object
+- focusOnObject distance parameter
+- switch betwenn itowns rendering and game rendering
+</code></pre><h1 id="v2.37.4">v2.37.4</h1><pre><code>- Game engine update
+- AllWidget template compute dynamic near and far camera
+- New Landing page
+- SlideShow v2
+</code></pre><h1 id="v2.37.3">v2.37.3</h1><pre><code>Sparql module:
+    - Fix legend coloring bug
+    - Integrate link labels
+    - Refactor graph construction and documentation
+    - Integrate TIW table filters
+    - Initial table integration
+    - Integrate cityobjectprovider extension
+    - Update graph query pipeline
+
+- Add websocket Message TYPE + documentation websocket API
+- Delete multilayer demo
+- Fix links to 3D Tiles in examples
+- Delete multilayer demo
+</code></pre><h1 id="v2.37.2">v2.37.2</h1><pre><code>- Gltf aren't rotated at importation
+- Fix one example deployment
+- Add cubemap scene background
+</code></pre><h1 id="v2.37.1">v2.37.1</h1><pre><code>- Add onRemove EVENT localscript
+- Fix Inputmanager
+- Add getParent
+- Add billboard example
+- Update ReleasePublish.md
+- Keep the id of the layer to tag 3DTiles
+- Remove default style for 3DTiles
+</code></pre><h1 id="v2.37.0">v2.37.0</h1><pre><code>- update iTowns dependency to 2.37.0
+  - update dependencies : proj4j (version ^2.7.5) and three (version 0.135.0)
+- minor documentation updates
+</code></pre><h1 id="v2.36.6">v2.36.6</h1><pre><code>- Add constants in websocket type msg `EDIT_CONF_COMP`
+- WebPack 5 :
+    - Update of url-loader
+    - Update of style-loader
+    - Split configs
+- Update landing page :
+    - Documentation
+    - Release link
+    - LocalAvatar example
+- Update some markdowns
+</code></pre><h1 id="v2.36.5">v2.36.5</h1><pre><code>- Remove record example
+- Worldcomputer 60 fps by default
+- Add isKeyUp isKeyDown in InputManager
+- New Command TYPE
+</code></pre><h1 id="v2.36.4">v2.36.4</h1><pre><code>- Change worlds.json loading
+</code></pre><h1 id="v2.36.3">v2.36.3</h1><pre><code>- Add quad to native model 3D of the assetsmanager
+- Fix of broken link to example deployment in docs
+</code></pre><h1 id="v2.36.2">v2.36.2</h1><pre><code>- Fix some examples
+- Delete bundle udv.js in examples' assets
+- Socket fix path url
+</code></pre><h1 id="v2.36.1">v2.36.1</h1><pre><code>- Game zeppelin tour
+- Game fix portal
+- Documentation ref on landing page
+</code></pre><h1 id="v2.36.0">v2.36.0</h1><pre><code>- reduce time resize gameview
+- add freeze feature go
+- Fix layer choice widget
+    - layer choice : better handling of html
+    - refacto of GetMesh() method to GetMeshes()
+- Focus on tileset
+    - add record.html to examples
+- remove Shared !
+- add basic example of recording
+- properly sending event when tile is loaded
+- improve loading view css
+- start a localGame with assets loaded
+- distant game start return promise
+- pointerLock API
+</code></pre><h1 id="v2.35.0">v2.35.0</h1><pre><code>* Add a SlideShow Window
+* Add SlideShow class and example
+* Add verification elevation config
+* Npm audit is now a travis job.
+* Added a description of archived branch retrieval
+</code></pre><h1 id="v2.34.1">v2.34.1</h1><pre><code>* update gitignore
+* Update SPARQL example.html
+* Add CodeQL-analysis.yml
+* Update SPARQL widget documentation
+* Added a pushing/PR process documentation
+</code></pre><h1 id="v2.34.0">v2.34.0</h1><pre><code>* Add Changelog file in Doc
+* renderData : Introducing the new renderData attribute whose purpose is to render animations.
+* Display a default style per mesh
+* Can get children tiles in tileset
+* Meshes from the same tile are now in different groups
+* Load geometries without _BatchID
+* Change billboard mask material
+* Use materials[0] when using an unique default material
+* Can apply a default style per mesh
+* Register a default style for each tile, unless a color is specified for the layer. In this case, create a default style for the whole tileset
+* Check if the type is 'b3dm' before creating default style
+* Point cloud : handling point cloud layer properly
+* The base gltf material can now be the default style
+* Delete old ifc feature, aimed to be in a demo
+* Don't override material if the material has a texture
+* Remove dependency towards remote data
+</code></pre></article></section><footer class="footer" id="PeOAagUepe"><div class="wrapper">Fork: <a href="https://github.com/VCityTeam/UD-Viz">https://github.com/VCityTeam/UD-Viz</a></div></footer></div></div></div><div class="search-container" id="PkfLWpAbet" style="display:none"><div class="wrapper" id="iCxFxjkHbP"><button class="icon-button search-close-button" id="VjLlGakifb" aria-label="close search"><svg><use xlink:href="#close-icon"></use></svg></button><div class="search-box-c"><svg><use xlink:href="#search-icon"></use></svg> <input type="text" id="vpcKVYIppa" class="search-input" placeholder="Search..." autofocus></div><div class="search-result-c" id="fWwVHRuDuN"><span class="search-result-c-text">Type anything to view search result</span></div></div></div><div class="mobile-menu-icon-container"><button class="icon-button" id="mobile-menu" data-isopen="false" aria-label="menu"><svg><use xlink:href="#menu-icon"></use></svg></button></div><div id="mobile-sidebar" class="mobile-sidebar-container"><div class="mobile-sidebar-wrapper"><a href="/" class="sidebar-title sidebar-title-anchor">@ud-viz/widget_geocoding</a><div class="mobile-nav-links"><div class="navbar-item"><a id="Github-mobile" href="https://github.com/VCityTeam/UD-Viz" target="_blank">Github</a></div><div class="navbar-item"><a id="Examples-mobile" href="https://ud-viz.vcityliris.data.alpha.grandlyon.com/" target="_blank">Examples</a></div><div class="navbar-item"><a id="udvizHome-mobile" href="../" target="">udviz</a></div><div class="navbar-item"><a id="udviz/extensions_3d_tiles_temporal-mobile" href="../extensions_3d_tiles_temporal" target="">udviz/extensions_3d_tiles_temporal</a></div><div class="navbar-item"><a id="udviz/frame3d-mobile" href="../frame3d" target="">udviz/frame3d</a></div><div class="navbar-item"><a id="udviz/game_browser-mobile" href="../game_browser" target="">udviz/game_browser</a></div><div class="navbar-item"><a id="udviz/game_browser_template-mobile" href="../game_browser_template" target="">udviz/game_browser_template</a></div><div class="navbar-item"><a id="udviz/game_editor-mobile" href="../game_editor" target="">udviz/game_editor</a></div><div class="navbar-item"><a id="udviz/game_node-mobile" href="../game_node" target="">udviz/game_node</a></div><div class="navbar-item"><a id="udviz/game_node_template-mobile" href="../game_node_template" target="">udviz/game_node_template</a></div><div class="navbar-item"><a id="udviz/game_shared-mobile" href="../game_shared" target="">udviz/game_shared</a></div><div class="navbar-item"><a id="udviz/game_shared_template-mobile" href="../game_shared_template" target="">udviz/game_shared_template</a></div><div class="navbar-item"><a id="udviz/show_room-mobile" href="../show_room" target="">udviz/show_room</a></div><div class="navbar-item"><a id="udviz/smdb-mobile" href="../smdb" target="">udviz/smdb</a></div><div class="navbar-item"><a id="udviz/utils_browser-mobile" href="../utils_browser" target="">udviz/utils_browser</a></div><div class="navbar-item"><a id="udviz/utils_node-mobile" href="../utils_node" target="">udviz/utils_node</a></div><div class="navbar-item"><a id="udviz/utils_shared-mobile" href="../utils_shared" target="">udviz/utils_shared</a></div><div class="navbar-item"><a id="udviz/visualizer-mobile" href="../visualizer" target="">udviz/visualizer</a></div><div class="navbar-item"><a id="udviz/widget_3d_tiles-mobile" href="../widget_3d_tiles" target="">udviz/widget_3d_tiles</a></div><div class="navbar-item"><a id="udviz/widget_base_map-mobile" href="../widget_base_map" target="">udviz/widget_base_map</a></div><div class="navbar-item"><a id="udviz/widget_bookmark-mobile" href="../widget_bookmark" target="">udviz/widget_bookmark</a></div><div class="navbar-item"><a id="udviz/widget_camera_positioner-mobile" href="../widget_camera_positioner" target="">udviz/widget_camera_positioner</a></div><div class="navbar-item"><a id="udviz/widget_extensions_3d_tiles_temporal-mobile" href="../widget_extensions_3d_tiles_temporal" target="">udviz/widget_extensions_3d_tiles_temporal</a></div><div class="navbar-item"><a id="udviz/widget_geocoding-mobile" href="../widget_geocoding" target="">udviz/widget_geocoding</a></div><div class="navbar-item"><a id="udviz/widget_guided_tour-mobile" href="../widget_guided_tour" target="">udviz/widget_guided_tour</a></div><div class="navbar-item"><a id="udviz/widget_layer_choice-mobile" href="../widget_layer_choice" target="">udviz/widget_layer_choice</a></div><div class="navbar-item"><a id="udviz/widget_legonizer-mobile" href="../widget_legonizer" target="">udviz/widget_legonizer</a></div><div class="navbar-item"><a id="udviz/widget_planar_controls-mobile" href="../widget_planar_controls" target="">udviz/widget_planar_controls</a></div><div class="navbar-item"><a id="udviz/widget_slide_show-mobile" href="../widget_slide_show" target="">udviz/widget_slide_show</a></div><div class="navbar-item"><a id="udviz/widget_sparql-mobile" href="../widget_sparql" target="">udviz/widget_sparql</a></div><div class="navbar-item"><a id="udviz/widget_versioning-mobile" href="../widget_versioning" target="">udviz/widget_versioning</a></div><div class="navbar-item"><a id="udviz/widget_workspace-mobile" href="../widget_workspace" target="">udviz/widget_workspace</a></div></div><div class="mobile-sidebar-items-c"><div class="sidebar-section-title with-arrow" data-isopen="false" id="sidebar-classes"><div>Classes</div><svg><use xlink:href="#down-icon"></use></svg></div><div class="sidebar-section-children-container"><div class="sidebar-section-children"><a href="GeocodingService_GeocodingService.html">GeocodingService</a></div><div class="sidebar-section-children"><a href="GeocodingView_GeocodingView.html">GeocodingView</a></div></div><div class="sidebar-section-title with-arrow" data-isopen="false" id="sidebar-tutorials"><div>Tutorials</div><svg><use xlink:href="#down-icon"></use></svg></div><div class="sidebar-section-children-container"><div class="sidebar-section-children"><a href="tutorial-Changelog.html">Changelog</a></div><div class="sidebar-section-children"><a href="tutorial-Contributing.html">Contributing</a></div><div class="sidebar-section-children"><a href="tutorial-Contributors.html">Contributors</a></div><div class="sidebar-section-children"><a href="tutorial-Definitions.html">Definitions</a></div><div class="sidebar-section-children"><a href="tutorial-Developers.html">Developers</a></div><div class="sidebar-section-children"><a href="tutorial-ReleasePublish.html">ReleasePublish</a></div><div class="sidebar-section-children"><a href="tutorial-Reproducibility.html">Reproducibility</a></div><div class="sidebar-section-children"><a href="tutorial-architecture.html">architecture</a></div><div class="sidebar-section-children"><a href="tutorial-game.html">game</a></div><div class="sidebar-section-children"><a href="tutorial-how_to_import.html">how_to_import</a></div><div class="sidebar-section-children"><a href="tutorial-initial_camera_transform.html">initial_camera_transform</a></div></div></div><div class="mobile-navbar-actions"><div class="navbar-right-item"><button class="icon-button search-button" aria-label="open-search"><svg><use xlink:href="#search-icon"></use></svg></button></div><div class="navbar-right-item"><button class="icon-button theme-toggle" aria-label="toggle-theme"><svg><use class="theme-svg-use" xlink:href="#light-theme-icon"></use></svg></button></div><div class="navbar-right-item"><button class="icon-button font-size" aria-label="change-font-size"><svg><use xlink:href="#font-size-icon"></use></svg></button></div></div></div></div><script type="text/javascript" src="scripts/core.min.js"></script><script src="scripts/search.min.js" defer="defer"></script><script src="scripts/third-party/fuse.js" defer="defer"></script><script type="text/javascript">var tocbotInstance=tocbot.init({tocSelector:"#eed4d2a0bfd64539bb9df78095dec881",contentSelector:".main-content",headingSelector:"h1, h2, h3",hasInnerContainers:!0,scrollContainer:".main-content",headingsOffset:130,onClick:bringLinkToView})</script></body></html>

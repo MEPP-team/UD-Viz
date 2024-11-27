@@ -1,0 +1,21 @@
+.method-member-container {
+  overflow: auto;
+}
+
+div.member-item-container {
+  display: none;
+}
+
+.navbar-left-items {
+  overflow-y: hidden;
+  overflow-x: scroll !important;
+}
+
+.navbar-item {
+  align-self: center;
+  overflow: initial !important;
+}
+
+.navbar-item a {
+  text-align: center;
+}
